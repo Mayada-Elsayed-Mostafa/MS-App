@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163079440232",
+    "project_id": "ms-application-975a7",
+    "storage_bucket": "ms-application-975a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163079440232:android:d6ffa4513755ddb1fb38dd",
+        "android_client_info": {
+          "package_name": "com.example.msapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWBMAgqt9aB-14s-u7qHptqz55-VubwS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".CisActivity">
+
+    <TextView
+        android:id="@+id/cis_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our app provides valuable insights into the factors that can predict the progression of Clinically Isolated Syndrome (CIS) to Multiple Sclerosis (MS). By analyzing various health indicators and medical history, we help you understand your individual risk of developing MS after experiencing a CIS episode. This knowledge empowers you to make informed decisions about your healthcare and treatment options."
+        android:textSize="16sp"
+        android:lineSpacingMultiplier="1.2"
+        android:textStyle="normal"
+        android:textColor="#333333"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/do_a_cis_test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="do a test"
+        android:textSize="18sp" />
+
+</RelativeLayout>
