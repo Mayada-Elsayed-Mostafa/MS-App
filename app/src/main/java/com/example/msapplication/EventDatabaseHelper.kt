@@ -34,14 +34,17 @@ class EventDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
     }
 
     fun insertEvent(event: Event) {
-        val db = writableDatabase
         val values = ContentValues()
         values.put(COLUMN_DATE, event.date)
         values.put(COLUMN_NAME, event.name)
         values.put(COLUMN_DESCRIPTION, event.description)
-        val newRowId = db.insert(TABLE_EVENTS, null, values)
-        db.close()
-        Log.d("EventDatabaseHelper", "Inserted event with ID: $newRowId")
+
+        try {
+            val newRowId = writableDatabase.insert(TABLE_EVENTS, null, values)
+            Log.d("EventDatabaseHelper", "Inserted event with ID: $newRowId")
+        } catch (e: Exception) {
+            Log.e("EventDatabaseHelper", "Error inserting event: ${e.message}")
+        }
     }
 
     fun getEventsForDate(date: String): List<Event> {
@@ -50,31 +53,36 @@ class EventDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
 
         val query = "SELECT * FROM $TABLE_EVENTS WHERE $COLUMN_DATE = ?"
         Log.d("DatabaseQuery", "Query: $query, Date: $date")
-        val cursor = db.rawQuery(query, arrayOf(date))
 
-        if (cursor.moveToFirst()) {
-            do {
-                // Log event details for debugging
-                val idIndex = cursor.getColumnIndex(COLUMN_ID)
-                val nameIndex = cursor.getColumnIndex(COLUMN_NAME)
-                val descriptionIndex = cursor.getColumnIndex(COLUMN_DESCRIPTION)
+        try {
+            val cursor = db.rawQuery(query, arrayOf(date))
+            if (cursor.moveToFirst()) {
+                do {
+                    val idIndex = cursor.getColumnIndex(COLUMN_ID)
+                    val nameIndex = cursor.getColumnIndex(COLUMN_NAME)
+                    val descriptionIndex = cursor.getColumnIndex(COLUMN_DESCRIPTION)
 
-                if (idIndex != -1 && nameIndex != -1 && descriptionIndex != -1) {
-                    val id = cursor.getLong(idIndex)
-                    val name = cursor.getString(nameIndex)
-                    val description = cursor.getString(descriptionIndex)
+                    if (idIndex != -1 && nameIndex != -1 && descriptionIndex != -1) {
+                        val id = cursor.getLong(idIndex)
+                        val name = cursor.getString(nameIndex)
+                        val description = cursor.getString(descriptionIndex)
 
-                    val event = Event(id, date, name, description)
-                    events.add(event)
-                }
-            } while (cursor.moveToNext())
-        } else {
-            Log.d("DatabaseQuery", "No events found for date: $date")
+                        val event = Event(id, date, name, description)
+                        events.add(event)
+                    }
+                } while (cursor.moveToNext())
+
+                Log.d("EventDatabaseHelper", "Retrieved ${events.size} events for date: $date")
+            } else {
+                Log.d("DatabaseQuery", "No events found for date: $date")
+            }
+
+            cursor.close()
+        } catch (e: Exception) {
+            Log.e("EventDatabaseHelper", "Error retrieving events: ${e.message}")
+        } finally {
+            db.close()
         }
-
-        cursor.close()
-        db.close()
-        Log.d("EventDatabaseHelper", "Retrieved ${events.size} events for date: $date")
 
         return events
     }
