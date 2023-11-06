@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
@@ -14,6 +16,20 @@ class NotificationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification)
+
+        // Reference the Toolbar from the layout
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+
+        // Set the Toolbar as the support action bar
+        setSupportActionBar(toolbar)
+
+        // Enable the back button (up button) in the action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Handle the back button click event
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         val eventDatabaseHelper = EventDatabaseHelper(this)
@@ -31,11 +47,17 @@ class NotificationActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        // Check if events were retrieved and set the visibility of the TextView
+        // Find the TextView and ImageView views
+        val noNotificationTv = findViewById<TextView>(R.id.noNotification_tv)
+        val noNotificationImg = findViewById<ImageView>(R.id.noNotification_img)
+
+        // Check if events were retrieved and set the visibility of the TextView and ImageView
         if (events.isEmpty()) {
-            findViewById<TextView>(R.id.noNotification_tv).visibility = View.VISIBLE
+            noNotificationTv.visibility = View.VISIBLE
+            noNotificationImg.visibility = View.VISIBLE
         } else {
-            findViewById<TextView>(R.id.noNotification_tv).visibility = View.GONE
+            noNotificationTv.visibility = View.GONE
+            noNotificationImg.visibility = View.GONE
         }
     }
 }
