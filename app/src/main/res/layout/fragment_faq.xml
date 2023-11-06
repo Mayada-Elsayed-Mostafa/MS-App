@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FaqFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Question 1: What is Multiple Sclerosis? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q: What is Multiple Sclerosis (MS)?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Multiple Sclerosis is a chronic autoimmune disease that affects the central nervous system..." />
+
+        <!-- Question 2: What are the symptoms of MS? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q: What are the common symptoms of MS?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Common symptoms of MS include fatigue, muscle weakness, balance problems, and more..." />
+
+        <!-- Question 3:  How is Multiple Sclerosis diagnosed? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q:  How is Multiple Sclerosis diagnosed?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• MS is typically diagnosed through a combination of medical history, neurological examinations, MRI scans, and sometimes a lumbar puncture (spinal tap). A diagnosis is made by a neurologist or a healthcare professional." />
+
+        <!-- Question 4:   Is there a cure for Multiple Sclerosis? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q:  H Is there a cure for Multiple Sclerosis?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="•  Currently, there is no cure for MS. However, there are disease-modifying therapies (DMTs) that can help manage symptoms and slow the progression of the disease." />
+
+        <!-- Question 5:  What can I do to manage MS symptoms? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q:  What can I do to manage MS symptoms?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Managing MS often involves a combination of medications, physical therapy, lifestyle changes, and symptom management. Consult with your healthcare provider for a personalized treatment plan." />
+
+        <!-- Question 6:  Can I continue to work with MS? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q:  Can I continue to work with MS?"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Many people with MS can continue to work, but accommodations and adjustments may be necessary. Discuss workplace accommodations and options with your employer and healthcare provider." />
+
+        <!-- Question 7:  How can I get involved in MS advocacy and support groups? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:text="Q:  How can I get involved in MS advocacy and support groups?" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• You can get involved by joining local MS support groups, participating in fundraising events, and connecting with organizations like the National Multiple Sclerosis Society for advocacy and resources." />
+
+        <!-- Question 8:  Are there dietary recommendations for people with MS? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:text="Q:  Are there dietary recommendations for people with MS?" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Some people with MS find that dietary changes, such as a balanced and healthy diet, may help manage symptoms. Consult with a healthcare provider or nutritionist for personalized advice." />
+
+        <!-- Question 9:  What is a relapse in MS? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:text="Q:  What is a relapse in MS?" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• A relapse, also known as a flare-up or exacerbation, is a sudden worsening of MS symptoms or the appearance of new symptoms. It's typically followed by periods of remission." />
+
+        <!-- Question 10:  How can I support a loved one with MS? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:text="Q:  How can I support a loved one with MS?" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PrimaryColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• Supporting someone with MS involves understanding their condition, offering emotional support, helping with daily tasks, and being patient and compassionate." />
+
+
+    </LinearLayout>
+</ScrollView>

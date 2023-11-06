@@ -3,18 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="Cinnabar">#E9442A</color>
-    <color name="Jaffa">#F16E49</color>
-    <color name="Sea_Pink">#EF9E8E</color>
-    <color name="PrimaryColor">#EC7E78</color>
+    <color name="Cinnabar">#129DE8</color>
+    <color name="Jaffa">#129DE8</color>
+    <color name="PrimaryColor">#129DE8</color>
 
-
-    <color name="colorAccent">#fafafa</color>
-    <color name="graylight">#fafafa</color>
-    <color name="startblue">#09c6df</color>
-    <color name="endblue">#0bcce6</color>
-    <color name="background">#FBFAFB</color>
-    <color name="profile_color">#0BC9E3</color>
-    <color name="text_color">#333639</color>
 
 </resources>

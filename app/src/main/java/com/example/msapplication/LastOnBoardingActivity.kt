@@ -4,16 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
 
 class LastOnBoardingActivity : AppCompatActivity() {
 
     private lateinit var signUpBtn: Button
     private lateinit var logInBtn: Button
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_last_on_boarding)
 
+        mAuth = FirebaseAuth.getInstance()
 
         signUpBtn = findViewById(R.id.signUp_btn)
 
@@ -27,6 +30,14 @@ class LastOnBoardingActivity : AppCompatActivity() {
         logInBtn.setOnClickListener {
             val intentToLogin = Intent(this, LoginActivity::class.java)
             startActivity(intentToLogin)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (mAuth.currentUser == null){
+            val intentLogin = Intent(this, LoginActivity::class.java)
+            startActivity(intentLogin)
         }
     }
 }

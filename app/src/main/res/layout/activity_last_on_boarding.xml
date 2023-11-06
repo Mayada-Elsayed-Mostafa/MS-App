@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
-    android:background="#FAF7E1"
     tools:context=".LastOnBoardingActivity">
 
     <ImageView
@@ -16,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/img5"/>
+        android:src="@drawable/hospital_patient"/>
 
     <TextView
         android:id="@+id/ready_tv"
@@ -24,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="24sp"
         android:gravity="center"
         android:text="Are you ready to take your first step towards managing multiple sclerosis with us?"/>
@@ -45,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/PrimaryColor"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#f5f5f5"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="50dp"

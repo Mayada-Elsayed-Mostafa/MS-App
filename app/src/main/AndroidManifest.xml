@@ -18,6 +18,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MSApplication"
         tools:targetApi="31">
+
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonitoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EdssActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotesActivity"
+            android:exported="false" />
         <activity
             android:name=".CisActivity"
             android:exported="false" />

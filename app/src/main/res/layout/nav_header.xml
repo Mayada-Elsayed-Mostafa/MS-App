@@ -13,7 +13,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/img1"
+        android:src="@drawable/mprofile"
         app:civ_border_color="@color/white"
         app:civ_border_width="2dp"
         app:civ_border_overlay="true"/>
@@ -21,14 +21,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mayada Elsayed"
+        android:text="Mayada_Elsayed"
         android:textColor="@color/white"
         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="emayada44@gmail.com"
+        android:text="mayyadaelsayed8@gmail.com"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"/>

@@ -16,30 +16,6 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val card_mri = view.findViewById<CardView>(R.id.card1!!)
-        val card_edss = view.findViewById<CardView>(R.id.card2!!)
-        val card_cis = view.findViewById<CardView>(R.id.card3!!)
-        val card_monitoring = view.findViewById<CardView>(R.id.card4!!)
-
-        card_mri.setOnClickListener {
-            val fragment1 = MriFragment()
-            navigateToFragment(fragment1)
-        }
-
-        card_edss.setOnClickListener {
-            val fragment2 = EdssFragment()
-            navigateToFragment(fragment2)
-        }
-
-        card_cis.setOnClickListener {
-            val intent = Intent(context, CisActivity::class.java)
-            startActivity(intent)
-        }
-
-        card_monitoring.setOnClickListener {
-            val fragment4 = MonitoringFragment()
-            navigateToFragment(fragment4)
-        }
 
         return view
     }
