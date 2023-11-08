@@ -9,7 +9,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class CommunityFragment : Fragment() {
 
-    private lateinit var bottomSheetFragment: BottomSheetFragment // Replace with the actual class name of your BottomSheetFragment
+    private lateinit var bottomSheetFragment: BottomSheetFragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,7 +18,7 @@ class CommunityFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_community, container, false)
         val addPostBtn = view.findViewById<FloatingActionButton>(R.id.add_post)
 
-        bottomSheetFragment = BottomSheetFragment() // Create an instance of your BottomSheetFragment
+        bottomSheetFragment = BottomSheetFragment() // Create an instance of my BottomSheetFragment
 
         addPostBtn.setOnClickListener {
             // Show the BottomSheetFragment when the button is clicked

@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -47,11 +48,17 @@ class ProfileFragment : Fragment() {
                 Log.w(TAG, "Error getting documents.", exception)
             }
 
-
         val notificationCard = view.findViewById<LinearLayout>(R.id.notification_card)
         notificationCard.setOnClickListener{
             val intent = Intent(context, NotificationActivity::class.java)
             startActivity(intent)
+        }
+
+
+        val settingsCard = view.findViewById<CardView>(R.id.settings_card!!)
+        settingsCard.setOnClickListener {
+            val intentToSettingsPage = Intent(context, SettingsActivity::class.java)
+            startActivity(intentToSettingsPage)
         }
 
         return view
