@@ -54,7 +54,6 @@ class CalendarFragment : Fragment() {
 
             // Close the dialog
             dialog.dismiss()
-
         }
     }
 }
