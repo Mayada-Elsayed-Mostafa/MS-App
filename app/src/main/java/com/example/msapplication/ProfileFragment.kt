@@ -10,12 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.lang.reflect.Array.get
 
 class ProfileFragment : Fragment() {
 
@@ -55,7 +53,7 @@ class ProfileFragment : Fragment() {
         }
 
 
-        val settingsCard = view.findViewById<CardView>(R.id.settings_card!!)
+        val settingsCard = view.findViewById<LinearLayout>(R.id.settings_card!!)
         settingsCard.setOnClickListener {
             val intentToSettingsPage = Intent(context, SettingsActivity::class.java)
             startActivity(intentToSettingsPage)
