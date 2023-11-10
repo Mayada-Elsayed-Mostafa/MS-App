@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
         )
 
         // Initialize RecyclerView and set the adapter
-        val appointmentsRecyclerView = view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView!!)
+        val appointmentsRecyclerView = view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView)
         appointmentsAdapter = AppointmentsAdapter(appointmentsList)
         appointmentsRecyclerView.adapter = appointmentsAdapter
 
@@ -35,12 +35,5 @@ class HomeFragment : Fragment() {
         appointmentsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         return view
-    }
-
-    private fun navigateToFragment(fragment: Fragment) {
-        val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container, fragment)
-        fragmentTransaction.addToBackStack(null) // If you want to add to the back stack
-        fragmentTransaction.commit()
     }
 }
