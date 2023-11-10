@@ -14,12 +14,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/notesFragment"
-        android:name="com.example.msapplication.NotesFragment"
-        android:label="Notes"
-        tools:layout="@layout/fragment_notes" />
-
-    <fragment
         android:id="@+id/postFragment"
         android:name="com.example.msapplication.CommunityFragment"
         android:label="Post"
@@ -36,5 +30,10 @@
         android:name="com.example.msapplication.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard"/>
+    <activity
+        android:id="@+id/notesActivity"
+        android:name="com.example.msapplication.NotesActivity"
+        android:label="Notes"
+        tools:layout="@layout/activity_notes" />
 
 </navigation>

@@ -113,7 +113,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/payment_card"
+                        android:id="@+id/documents_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -127,14 +127,14 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
-                            android:src="@drawable/payment" />
+                            android:src="@drawable/documentation_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:text="Payment"
+                            android:text="Documents"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textStyle="bold" />

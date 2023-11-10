@@ -47,7 +47,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.navigation_dashboard -> replaceFragment(DashboardFragment())
                 R.id.navigation_community -> replaceFragment(CommunityFragment())
                 R.id.navigation_profile -> replaceFragment(ProfileFragment())
-                R.id.navigation_notes -> replaceFragment(NotesFragment())
+                R.id.nav_notes -> {
+                    val notesIntent = Intent(this, NotesActivity::class.java)
+                    startActivity(notesIntent)
+                }
             }
             true
         }
@@ -86,6 +89,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_settings -> replaceFragment(SettingsFragment())
             R.id.nav_share -> replaceFragment(ShareFragment())
             R.id.nav_about -> replaceFragment(FaqFragment())
+            R.id.nav_notes -> {
+                val notesIntent = Intent(this, NotesActivity::class.java)
+                startActivity(notesIntent)
+            }
             R.id.nav_logout -> handleLogout()
         }
         drawerLayout.closeDrawer(GravityCompat.START)

@@ -59,11 +59,6 @@ class ProfileFragment : Fragment() {
             startActivity(intentToSettingsPage)
         }
 
-        val paymentCard = view.findViewById<LinearLayout>(R.id.payment_card!!)
-        paymentCard.setOnClickListener {
-            val intentToNotesActivity = Intent(context, NotesActivity::class.java)
-            startActivity(intentToNotesActivity)
-        }
 
         return view
     }

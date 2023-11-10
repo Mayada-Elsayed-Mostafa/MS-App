@@ -4,7 +4,10 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -20,8 +23,24 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notes)
 
+
+        // Reference the Toolbar from the layout
+        val toolbar = findViewById<Toolbar>(R.id.toolbar!!)
+
+        // Set the Toolbar as the support action bar
+        setSupportActionBar(toolbar)
+
+        // Enable the back button (up button) in the action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Handle the back button click event
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         val recyclerViewNotes = findViewById<RecyclerView>(R.id.recyclerViewNotes)
         val fabAddNote = findViewById<FloatingActionButton>(R.id.fabAddNote)
+        val imageNoNotes = findViewById<ImageView>(R.id.imageNoNotes)
 
         notesAdapter = NotesAdapter(notesList, this, this)
         recyclerViewNotes.layoutManager = LinearLayoutManager(this)
@@ -31,6 +50,15 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
 
         fabAddNote.setOnClickListener {
             showBottomSheet()
+        }
+
+        // Check if there are no notes to show the "no notes" image
+        if (notesList.isEmpty()) {
+            imageNoNotes.visibility = View.VISIBLE
+            recyclerViewNotes.visibility = View.GONE
+        } else {
+            imageNoNotes.visibility = View.GONE
+            recyclerViewNotes.visibility = View.VISIBLE
         }
     }
 
@@ -60,13 +88,13 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
         bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
     }
 
-
-
-
     override fun onNoteDelete(position: Int) {
         notesList.removeAt(position)
         notesAdapter.notifyItemRemoved(position)
         saveNotes()
+
+        // Update visibility of "no notes" image based on notesList
+        updateNoNotesVisibility()
     }
 
     fun addNoteFromBottomSheet(title: String, details: String) {
@@ -74,6 +102,9 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
         notesList.add(newNote)
         notesAdapter.notifyItemInserted(notesList.size - 1)
         saveNotes()
+
+        // Update visibility of "no notes" image based on notesList
+        updateNoNotesVisibility()
     }
 
     fun updateNoteFromBottomSheet(title: String, details: String, position: Int) {
@@ -89,6 +120,9 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
             // Handle the case where the position is invalid (e.g., -1)
             // You might want to log an error or show a message to the user.
         }
+
+        // Update visibility of "no notes" image based on notesList
+        updateNoNotesVisibility()
     }
 
     private fun saveNotes() {
@@ -122,5 +156,18 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
         }
 
         notesAdapter.notifyDataSetChanged()
+    }
+
+    private fun updateNoNotesVisibility() {
+        val imageNoNotes = findViewById<ImageView>(R.id.imageNoNotes)
+        val recyclerViewNotes = findViewById<RecyclerView>(R.id.recyclerViewNotes)
+
+        if (notesList.isEmpty()) {
+            imageNoNotes.visibility = View.VISIBLE
+            recyclerViewNotes.visibility = View.GONE
+        } else {
+            imageNoNotes.visibility = View.GONE
+            recyclerViewNotes.visibility = View.VISIBLE
+        }
     }
 }
