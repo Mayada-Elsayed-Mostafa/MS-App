@@ -105,7 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:text="Notification"
+                            android:text="@string/notification"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textStyle="bold" />

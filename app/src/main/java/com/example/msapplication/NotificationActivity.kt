@@ -48,8 +48,8 @@ class NotificationActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         // Find the TextView and ImageView views
-        val noNotificationTv = findViewById<TextView>(R.id.noNotification_tv)
-        val noNotificationImg = findViewById<ImageView>(R.id.noNotification_img)
+        val noNotificationTv = findViewById<TextView>(R.id.noDocuments_tv)
+        val noNotificationImg = findViewById<ImageView>(R.id.noDocuments_img)
 
         // Check if events were retrieved and set the visibility of the TextView and ImageView
         if (events.isEmpty()) {

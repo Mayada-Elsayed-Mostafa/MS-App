@@ -18,7 +18,7 @@ import com.google.firebase.ktx.Firebase
 class ProfileFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
-    var db = Firebase.firestore
+    private var db = Firebase.firestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,8 +29,8 @@ class ProfileFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-        val userName = view.findViewById<TextView>(R.id.name_tv!!)
-        val email = view.findViewById<TextView>(R.id.email_tv!!)
+        val userName = view.findViewById<TextView>(R.id.name_tv)
+        val email = view.findViewById<TextView>(R.id.email_tv)
 
         db.collection("users")
             .get()
@@ -53,10 +53,16 @@ class ProfileFragment : Fragment() {
         }
 
 
-        val settingsCard = view.findViewById<LinearLayout>(R.id.settings_card!!)
+        val settingsCard = view.findViewById<LinearLayout>(R.id.settings_card)
         settingsCard.setOnClickListener {
             val intentToSettingsPage = Intent(context, SettingsActivity::class.java)
             startActivity(intentToSettingsPage)
+        }
+
+        val documentsCard = view.findViewById<LinearLayout>(R.id.documents_card)
+        documentsCard.setOnClickListener {
+            val intentToDocumentsPage = Intent(context, DocumentsActivity::class.java)
+            startActivity(intentToDocumentsPage)
         }
 
 

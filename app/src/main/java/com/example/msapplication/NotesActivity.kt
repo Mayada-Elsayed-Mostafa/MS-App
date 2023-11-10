@@ -39,7 +39,7 @@ class NotesActivity : AppCompatActivity(), NotesAdapter.OnNoteEditListener, Note
         }
 
         val recyclerViewNotes = findViewById<RecyclerView>(R.id.recyclerViewNotes)
-        val fabAddNote = findViewById<FloatingActionButton>(R.id.fabAddNote)
+        val fabAddNote = findViewById<FloatingActionButton>(R.id.fabAddDocuments)
         val imageNoNotes = findViewById<ImageView>(R.id.imageNoNotes)
 
         notesAdapter = NotesAdapter(notesList, this, this)

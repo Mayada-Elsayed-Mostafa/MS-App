@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotesActivity">
+    tools:context=".DocumentsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,13 +14,13 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         app:layout_collapseMode="pin"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
         app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:title="Notes"
+        app:title="Documents"
         app:titleTextColor="@android:color/white"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewNotes"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
@@ -29,32 +29,29 @@
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_below="@id/toolbar"/>
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/fabAddDocuments"/>
 
-    <!-- ImageView to be shown when there are no notes -->
+    <!-- ImageView to be shown when there are no documents -->
     <ImageView
-        android:id="@+id/imageNoNotes"
+        android:id="@+id/noDocuments_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/diary_img"
+        android:src="@drawable/add_document"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toTopOf="@id/fabAddDocuments"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_above="@id/fabAddDocuments"
+        android:layout_below="@id/toolbar"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddDocuments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_post_add"
+        android:src="@drawable/ic_upload_file"
         android:backgroundTint="@color/PrimaryColor"
         app:tint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>
