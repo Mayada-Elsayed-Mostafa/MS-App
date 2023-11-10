@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -100,13 +101,32 @@ class DocumentsActivity : AppCompatActivity() {
     }
 
     private fun getDocumentsFromStorage(): List<Document> {
-        // TODO: Implement logic to retrieve documents from storage
-        // You can use methods like Environment.getExternalStorageDirectory() or other appropriate methods
-        // Return a list of Document objects with the necessary information
-        return listOf(
-            Document("Document 1", "Details 1"),
-            Document("Document 2", "Details 2")
-            // Add more documents as needed
+        val documentsList = mutableListOf<Document>()
+
+        val uri = MediaStore.Files.getContentUri("external")
+
+        val projection = arrayOf(
+            MediaStore.Files.FileColumns.DISPLAY_NAME,
+            MediaStore.Files.FileColumns.DATA
         )
+
+        val selection = "${MediaStore.Files.FileColumns.MIME_TYPE}=?"
+        val selectionArgs = arrayOf("application/pdf") // Filter by PDF MIME type
+
+        val sortOrder = "${MediaStore.Files.FileColumns.DATE_ADDED} DESC"
+
+        applicationContext.contentResolver.query(uri, projection, selection, selectionArgs, sortOrder)?.use { cursor ->
+            val nameColumn = cursor.getColumnIndexOrThrow(MediaStore.Files.FileColumns.DISPLAY_NAME)
+            val dataColumn = cursor.getColumnIndexOrThrow(MediaStore.Files.FileColumns.DATA)
+
+            while (cursor.moveToNext()) {
+                val title = cursor.getString(nameColumn)
+                val path = cursor.getString(dataColumn)
+                documentsList.add(Document(title, path))
+            }
+        }
+
+        return documentsList
     }
+
 }

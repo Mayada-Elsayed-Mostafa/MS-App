@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/add_document"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_above="@id/fabAddDocuments"
         android:layout_below="@id/toolbar"/>
 

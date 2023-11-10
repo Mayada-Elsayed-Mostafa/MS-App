@@ -35,5 +35,10 @@
         android:name="com.example.msapplication.NotesActivity"
         android:label="Notes"
         tools:layout="@layout/activity_notes" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.msapplication.SettingsActivity"
+        android:label="Settings"
+        tools:layout="@layout/activity_settings" />
 
 </navigation>

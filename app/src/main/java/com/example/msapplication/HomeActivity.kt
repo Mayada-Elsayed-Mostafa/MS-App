@@ -86,7 +86,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.navigation_home -> replaceFragment(HomeFragment())
             R.id.navigation_calendar-> replaceFragment(CalendarFragment())
-            R.id.nav_settings -> replaceFragment(SettingsFragment())
+            R.id.nav_settings -> {
+                val settingsIntent = Intent(this, SettingsActivity::class.java)
+                startActivity(settingsIntent)
+            }
             R.id.nav_share -> replaceFragment(ShareFragment())
             R.id.nav_about -> replaceFragment(FaqFragment())
             R.id.nav_notes -> {
