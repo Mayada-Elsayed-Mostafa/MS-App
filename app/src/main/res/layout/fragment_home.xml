@@ -10,16 +10,61 @@
     android:layout_marginEnd="8dp"
     tools:context=".HomeFragment">
 
-    <!-- Title -->
+    <!-- Welcome Message -->
     <TextView
+        android:id="@+id/welcomeMessageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello in Multiple Sclerosis App"
-        android:layout_marginTop="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:text="Welcome to NeuroMS!\nWe're here to support you on your journey with Multiple Sclerosis."
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="16dp"/>
 
+    <!-- User Profile -->
+    <LinearLayout
+        android:id="@+id/userProfileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mprofile"
+            android:contentDescription="profile_image_description"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mayada_Elsayed"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/accountStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Status: Active"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appointmentsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
