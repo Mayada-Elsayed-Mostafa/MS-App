@@ -27,6 +27,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout = findViewById(R.id.drawer_layout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        toolbar.title = "Welcome to NeuroMS"
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
@@ -87,6 +88,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.navigation_home -> replaceFragment(HomeFragment())
+            R.id.navigation_profile -> {
+                val profileIntent = Intent(this, ProfileActivity::class.java)
+                startActivity(profileIntent)
+            }
             R.id.navigation_calendar-> replaceFragment(CalendarFragment())
             R.id.nav_settings -> {
                 val settingsIntent = Intent(this, SettingsActivity::class.java)

@@ -13,7 +13,7 @@
         android:id="@+id/toolbar_community"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="8dp"
+        android:elevation="4dp"
         android:background="@color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -29,7 +29,8 @@
             android:layout_height="50dp"
             android:src="@drawable/mprofile"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/start_post"
@@ -37,6 +38,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="16dp"
             app:cardCornerRadius="16dp"
             android:layout_weight="1"

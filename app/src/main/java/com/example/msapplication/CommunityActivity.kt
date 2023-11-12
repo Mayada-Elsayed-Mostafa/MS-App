@@ -18,6 +18,7 @@ class CommunityActivity : AppCompatActivity() {
         val toolbarCommunity = findViewById<Toolbar>(R.id.toolbar_community)
         setSupportActionBar(toolbarCommunity)
 
+        toolbarCommunity.title = "Community Forum"
         // Add icons to the toolbar
         toolbarCommunity.inflateMenu(R.menu.menu_toolbar_community)
         toolbarCommunity.setOnMenuItemClickListener { item -> onMenuItemClick(item) }
