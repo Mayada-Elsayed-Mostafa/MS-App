@@ -18,8 +18,4 @@
         android:id="@+id/navigation_notes"
         android:icon="@drawable/ic_notes"
         android:title="Daily notes" />
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
 </menu>

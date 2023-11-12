@@ -1,5 +1,6 @@
 package com.example.msapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -36,21 +37,18 @@ class CommunityActivity : AppCompatActivity() {
     private fun onMenuItemClick(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_profile -> {
-                // Handle profile icon click
-                // Example: navigate to the profile screen
-                // startActivity(ProfileActivity.newIntent(this))
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
                 return true
             }
             R.id.menu_notifications -> {
-                // Handle notifications icon click
-                // Example: show notifications screen
-                // startActivity(NotificationsActivity.newIntent(this))
+                val intent = Intent(this, NotificationActivity::class.java)
+                startActivity(intent)
                 return true
             }
             R.id.menu_chats -> {
-                // Handle chats icon click
-                // Example: open chats activity
-                // startActivity(ChatsActivity.newIntent(this))
+                val intent = Intent(this, ChatsActivity::class.java)
+                startActivity(intent)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

@@ -45,5 +45,10 @@
         android:name="com.example.msapplication.CommunityActivity"
         android:label="activity_community"
         tools:layout="@layout/activity_community" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.msapplication.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
 
 </navigation>
