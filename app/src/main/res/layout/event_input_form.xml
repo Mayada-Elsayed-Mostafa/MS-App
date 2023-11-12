@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:hint="Event Description" />
 
-    <!-- Add more input fields as needed -->
 
     <Button
         android:id="@+id/saveEventButton"

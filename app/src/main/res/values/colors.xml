@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Gray">#F8F6F6</color>
 
     <color name="Cinnabar">#129DE8</color>
     <color name="Jaffa">#129DE8</color>
