@@ -20,46 +20,12 @@
         android:textColor="@android:color/black"
         android:padding="16dp"/>
 
-    <!-- User Profile -->
-    <LinearLayout
-        android:id="@+id/userProfileLayout"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profileImageView"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/mprofile"
-            android:contentDescription="profile_image_description"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            android:paddingStart="16dp">
-
-            <TextView
-                android:id="@+id/usernameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mayada_Elsayed"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/accountStatusTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Account Status: Active"
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-    </LinearLayout>
+        android:text="Appointments"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
 
     <!-- Appointments RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView

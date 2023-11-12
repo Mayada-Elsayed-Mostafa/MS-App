@@ -14,9 +14,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/postFragment"
+        android:id="@+id/communityFragment"
         android:name="com.example.msapplication.CommunityFragment"
-        android:label="Post"
+        android:label="Community"
         tools:layout="@layout/fragment_community" />
 
     <fragment
@@ -40,5 +40,10 @@
         android:name="com.example.msapplication.SettingsActivity"
         android:label="Settings"
         tools:layout="@layout/activity_settings" />
+    <activity
+        android:id="@+id/communityActivity"
+        android:name="com.example.msapplication.CommunityActivity"
+        android:label="activity_community"
+        tools:layout="@layout/activity_community" />
 
 </navigation>

@@ -45,7 +45,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             when (item.itemId) {
                 R.id.navigation_home -> replaceFragment(HomeFragment())
                 R.id.navigation_dashboard -> replaceFragment(DashboardFragment())
-                R.id.navigation_community -> replaceFragment(CommunityFragment())
+                R.id.navigation_community -> {
+                    val communityIntent = Intent(this, CommunityActivity::class.java)
+                    startActivity(communityIntent)
+                }
                 R.id.navigation_profile -> replaceFragment(ProfileFragment())
                 R.id.nav_notes -> {
                     val notesIntent = Intent(this, NotesActivity::class.java)
