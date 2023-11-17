@@ -25,7 +25,7 @@ class OnBoardingActivity : AppCompatActivity() {
                     previousBtn.visibility = View.GONE
                 }
                 3 -> {
-                    skipBtn.text = "Get Started"
+                    nextBtn.text = "Get Started"
                     skipBtn.visibility = View.GONE
                     nextBtn.visibility = View.VISIBLE
                     previousBtn.visibility = View.VISIBLE
