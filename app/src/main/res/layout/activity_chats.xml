@@ -36,13 +36,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chats_tabs"/>
 
-    <com.google.android.material.search.SearchBar
-        android:layout_width="match_parent"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="24dp"
+        app:cardUseCompatPadding="true"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:hint="Search in Messages"
-        app:layout_constraintTop_toBottomOf="@id/chats_viewPager"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chats_viewPager">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Search in Messages"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddDocuments"
