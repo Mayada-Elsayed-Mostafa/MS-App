@@ -17,8 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:title="Messages"
-        app:titleTextColor="@android:color/primary_text_light"/>
+        app:title="Messages" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/chats_tabs"
@@ -54,8 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:queryHint="Search in Messages"
-            app:iconifiedByDefault="false"
-            app:queryBackground="@android:color/transparent"/>
+            app:iconifiedByDefault="false" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -69,8 +67,6 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_add"
-        android:backgroundTint="@color/PrimaryColor"
-        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

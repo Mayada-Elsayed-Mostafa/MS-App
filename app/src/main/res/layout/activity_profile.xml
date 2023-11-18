@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9F8F8"
     tools:context=".ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +28,6 @@
             android:src="@drawable/mprofile"
             app:civ_border_overlay="true"
             app:civ_border_width="2dp"
-            app:civ_border_color="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,10 +37,8 @@
             android:id="@+id/name_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your name"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,10 +50,8 @@
             android:id="@+id/email_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your email"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +130,6 @@
                         android:layout_marginBottom="10dp"
                         android:text="Documents"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -165,7 +158,6 @@
                         android:layout_marginBottom="10dp"
                         android:text="Settings"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -186,7 +178,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Password :"
-                    android:textColor="@color/PrimaryColor"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -196,7 +187,6 @@
                     android:layout_weight="1"
                     android:text="Change"
                     android:textAlignment="viewEnd"
-                    android:textColor="#585858"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -205,8 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:alpha="0.5"
-                android:background="#585858" />
+                android:alpha="0.5" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -222,7 +211,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Mobile :"
-                    android:textColor="@color/PrimaryColor"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -232,7 +220,6 @@
                     android:layout_weight="1"
                     android:text="01009893269"
                     android:textAlignment="viewEnd"
-                    android:textColor="#585858"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -241,8 +228,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:alpha="0.5"
-                android:background="#585858" />
+                android:alpha="0.5"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -258,7 +244,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Gender :"
-                    android:textColor="@color/PrimaryColor"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -266,9 +251,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Female"
+                    android:text="@string/female"
                     android:textAlignment="viewEnd"
-                    android:textColor="#585858"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -277,8 +261,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:alpha="0.5"
-                android:background="#585858" />
+                android:alpha="0.5" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -293,8 +276,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Address :"
-                    android:textColor="@color/PrimaryColor"
+                    android:text="@string/address"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -304,7 +286,6 @@
                     android:layout_weight="1"
                     android:text="Zagazig, Egypt"
                     android:textAlignment="viewEnd"
-                    android:textColor="#585858"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -321,7 +302,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            android:text="Apply Changes"/>
+            android:text="@string/apply_changes"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -11,12 +11,11 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="250dp"
         android:src="@drawable/login_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/login_tv"
@@ -66,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="@string/password"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,8 +78,7 @@
         app:layout_constraintTop_toBottomOf="@id/password_ed"
         android:layout_margin="16dp"
         android:textSize="18sp"
-        android:text="Log in"
-        android:backgroundTint="@color/PrimaryColor" />
+        android:text="@string/log_in" />
 
     <LinearLayout
         android:id="@+id/do_not_have_an_account_tv"
@@ -97,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="Don't have an account?"/>
+            android:text="@string/don_t_have_an_account"/>
 
         <TextView
             android:id="@+id/sign_in_tv"
@@ -106,8 +104,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="10dp"
-            android:textColor="@color/PrimaryColor"
-            android:text="Sign up"/>
+            android:text="@string/sign_up"/>
 
     </LinearLayout>
 
@@ -119,7 +116,6 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,14 +126,13 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_google"
-            android:contentDescription="Google Logo"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Continue with Google"
+            android:text="@string/continue_with_google"
             android:textSize="16sp"/>
     </LinearLayout>
 

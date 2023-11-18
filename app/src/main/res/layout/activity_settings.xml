@@ -11,15 +11,22 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         app:layout_collapseMode="pin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:title="Settings"
-        app:titleTextColor="@android:color/white"/>
+        app:navigationIcon="?android:attr/homeAsUpIndicator">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="18sp"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profileVisibility"
@@ -42,9 +49,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PROFILE VISIBILITY"
+                android:text="@string/profile_visibility"
                 android:layout_marginTop="8dp"
-                android:textSize="20sp"/>
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,11 +60,10 @@
                 android:layout_marginVertical="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Show your profile to other members"
-                    android:textColor="@color/black"
+                    android:text="@string/show_your_profile_to_other_members"
                     android:textSize="18sp"/>
 
                <Switch
@@ -91,8 +97,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="NOTIFICATIONS"
-                android:textSize="20sp"/>
+                android:text="@string/notifications"
+                android:textAllCaps="true"
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,8 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Messages"
-                    android:textColor="@color/black"
+                    android:text="@string/messages"
                     android:textSize="18sp"/>
 
                 <Switch
@@ -119,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="New messages, mentions and match requests"/>
+                android:text="@string/new_messages_mentions_and_match_requests"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -146,8 +152,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="FEEDBACK AND FAQ"
-                android:textSize="20sp"/>
+                android:text="@string/feedback_and_faq"
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,26 +162,24 @@
                 android:layout_marginVertical="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tell us what you think"
-                    android:textColor="@color/black"
+                    android:text="@string/tell_us_what_you_think"
                     android:textSize="18sp"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_forward"
-                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
                     android:layout_gravity="end"/>
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:alpha="0.5"
-                android:background="#585858" />
+                android:alpha="0.5"/>
 
 
             <LinearLayout
@@ -185,18 +189,17 @@
                 android:layout_marginVertical="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Learn more with our FAQ"
-                    android:textColor="@color/black"
+                    android:text="@string/learn_more_with_our_faq"
                     android:textSize="18sp"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_forward"
-                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
                     android:layout_gravity="end"/>
             </LinearLayout>
         </LinearLayout>
@@ -223,8 +226,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="LEGAL"
-                android:textSize="20sp"/>
+                android:text="@string/legal"
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -233,26 +236,24 @@
                 android:layout_marginVertical="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Privacy policy"
-                    android:textColor="@color/black"
+                    android:text="@string/privacy_policy"
                     android:textSize="18sp"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_forward"
-                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
                     android:layout_gravity="end"/>
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:alpha="0.5"
-                android:background="#585858" />
+                android:alpha="0.5"/>
 
 
             <LinearLayout
@@ -262,18 +263,17 @@
                 android:layout_marginVertical="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Terms of use"
-                    android:textColor="@color/black"
+                    android:text="@string/terms_of_use"
                     android:textSize="18sp"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_forward"
-                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
                     android:layout_gravity="end"/>
             </LinearLayout>
         </LinearLayout>
@@ -288,8 +288,8 @@
         app:layout_constraintBottom_toTopOf="@id/delete_account_tv"
         android:layout_marginHorizontal="8dp"
         android:layout_marginVertical="4dp"
-        android:text="Logout"
-        android:textSize="20sp"/>
+        android:text="@string/logout"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/delete_account_tv"
@@ -301,8 +301,8 @@
         android:layout_marginHorizontal="8dp"
         android:layout_marginVertical="4dp"
         android:gravity="center"
-        android:textSize="20sp"
-        android:text="Delete my Account"
+        android:textSize="18sp"
+        android:text="@string/delete_my_account"
         android:paddingBottom="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,9 +21,15 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:elevation="4dp"
-            android:background="@color/PrimaryColor"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_neuroms"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -40,8 +46,7 @@
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/bottom_navigation_menu"
-            app:itemIconTint="?attr/colorPrimary"/>
+            app:menu="@menu/bottom_navigation_menu" />
 
 
     </LinearLayout>
@@ -53,7 +58,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/PrimaryColor"
-        app:itemTextColor="@color/PrimaryColor"/>
+        app:itemIconTint="@color/bright_blue"
+        app:itemTextColor="@color/dark_blue"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

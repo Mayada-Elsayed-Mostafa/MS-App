@@ -11,13 +11,19 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         app:layout_collapseMode="pin"
         android:layout_alignParentTop="true"
-        app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:title="Documents"
-        app:titleTextColor="@android:color/white"/>
+        app:navigationIcon="?android:attr/homeAsUpIndicator">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/documents"
+            android:textSize="18sp"
+            android:layout_gravity="center" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -50,8 +56,6 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_upload_file"
-        android:backgroundTint="@color/PrimaryColor"
-        app:tint="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"/>
 </RelativeLayout>

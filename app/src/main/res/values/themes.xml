@@ -1,15 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.MSApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/Cinnabar</item>
-        <item name="colorPrimaryVariant">@color/Jaffa</item>
-        <item name="android:statusBarColor">@color/PrimaryColor</item>
+
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/healthBlue</item>
+
+        <!-- Darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/healthDarkBlue</item>
+
+        <!-- Accent color that complements the primary color -->
+        <item name="colorAccent">@color/healthGreen</item>
+
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/healthWhite</item>
+
+        <!-- CardView background color -->
+        <item name="cardBackgroundColor">@color/healthWhite</item>
+
+        <!-- Text color -->
+        <item name="android:textColor">@color/healthDarkGray</item>
+
     </style>
 
     <style name="Theme.MSApplication" parent="Base.Theme.MSApplication" />
 
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/img1</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.MSApplication</item>
     </style>

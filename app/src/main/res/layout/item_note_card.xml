@@ -38,15 +38,13 @@
                 android:id="@+id/buttonEditNote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_edit_note"
-                android:contentDescription="edit_note" />
+                android:src="@drawable/ic_edit_note"/>
 
             <ImageButton
                 android:id="@+id/buttonDeleteNote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_delete_note"
-                android:contentDescription="delete_note"
                 android:layout_marginStart="16dp" />
         </LinearLayout>
     </LinearLayout>

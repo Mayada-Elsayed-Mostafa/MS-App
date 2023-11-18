@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:text="Welcome to NeuroMS!\nWe're here to support you on your journey with Multiple Sclerosis."
         android:textSize="18sp"
-        android:textColor="@android:color/black"
         android:padding="16dp"/>
 
     <TextView
@@ -25,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/appointments"
-        android:textColor="@color/black"
         android:textSize="24sp"/>
 
     <!-- Appointments RecyclerView -->

@@ -16,15 +16,22 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
             android:elevation="4dp"
             app:layout_collapseMode="pin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="?android:attr/homeAsUpIndicator"
-            app:title="Notification"
-            app:titleTextColor="@android:color/white" />
+            app:navigationIcon="?android:attr/homeAsUpIndicator">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:textSize="18sp"
+                android:layout_gravity="center" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:id="@+id/noDocuments_tv"
@@ -37,8 +44,7 @@
             android:layout_marginHorizontal="16dp"
             android:text="Your notification feed is empty. Stay tuned for updates and messages!"
             android:textSize="18sp"
-            android:gravity="center"
-            android:textColor="@color/black" />
+            android:gravity="center" />
 
         <ImageView
             android:id="@+id/noDocuments_img"

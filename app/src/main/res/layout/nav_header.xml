@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="175dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/PrimaryColor"
     android:gravity="bottom"
     android:padding="16dp"
     android:orientation="vertical"
@@ -14,7 +13,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/mprofile"
-        app:civ_border_color="@color/white"
         app:civ_border_width="2dp"
         app:civ_border_overlay="true"/>
 
@@ -22,14 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mayada_Elsayed"
-        android:textColor="@color/white"
         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mayyadaelsayed8@gmail.com"
-        android:textColor="@color/white"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"/>
 

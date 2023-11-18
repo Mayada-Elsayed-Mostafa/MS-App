@@ -2,10 +2,46 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="Gray">#F8F6F6</color>
+    <color name="light_gray">#DEE2E6</color>
 
-    <color name="Cinnabar">#129DE8</color>
-    <color name="Jaffa">#129DE8</color>
-    <color name="PrimaryColor">#129DE8</color>
+
+
+    <color name="dark_blue">#023E8A</color>
+    <color name="light_blue">#48CAE4</color>
+    <color name="light_shade_of_blue">#90E0EF</color>
+    <color name="light_turquoise">#ADE8F4</color>
+    <color name="sky_blue">#CAF0F8</color>
+
+
+
+    <!-- Blue -->
+    <color name="healthBlue">#3498db</color>
+
+    <!-- Green -->
+    <color name="healthGreen">#2ecc71</color>
+
+    <!-- Dark Gray -->
+    <color name="healthDarkGray">#333333</color>
+
+    <!-- Dark Blue (Darker variant) -->
+    <color name="healthDarkBlue">#1f3a93</color>
+
+
+    <!-- White -->
+    <color name="healthWhite">#ffffff</color>
+
+    <!-- Light Gray -->
+    <color name="healthLightGray">#ecf0f1</color>
+
+    <!-- Soft Pastels -->
+    <color name="healthLightPink">#f5b7b1</color>
+    <color name="healthLightBlue">#aed6f1</color>
+
+    <!-- Teal -->
+    <color name="healthTeal">#008080</color>
+
+
+
+    <color name="bright_blue">#129DE8</color>
 
 </resources>

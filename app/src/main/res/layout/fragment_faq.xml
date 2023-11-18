@@ -23,13 +23,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -49,13 +47,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -75,13 +71,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -101,13 +95,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -127,13 +119,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -153,13 +143,11 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -178,14 +166,12 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"
             android:text="Q:  How can I get involved in MS advocacy and support groups?" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -204,14 +190,12 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"
             android:text="Q:  Are there dietary recommendations for people with MS?" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -230,14 +214,12 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"
             android:text="Q:  What is a relapse in MS?" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -256,14 +238,12 @@
             android:paddingBottom="4dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_marginTop="16dp"
             android:text="Q:  How can I support a loved one with MS?" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/PrimaryColor" />
+            android:layout_height="1.5dp"/>
 
         <TextView
             android:layout_width="match_parent"
