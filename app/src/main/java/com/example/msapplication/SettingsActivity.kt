@@ -11,7 +11,7 @@ class SettingsActivity : AppCompatActivity() {
 
 
         // Reference the Toolbar from the layout
-        val toolbar = findViewById<Toolbar>(R.id.toolbar!!)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 
         // Set the Toolbar as the support action bar
         setSupportActionBar(toolbar)
