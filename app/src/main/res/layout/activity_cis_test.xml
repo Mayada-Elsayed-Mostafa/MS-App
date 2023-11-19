@@ -433,7 +433,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/light_blue"
+                android:backgroundTint="@color/healthLightBlue"
                 android:text="Result"/>
 
             <TextView

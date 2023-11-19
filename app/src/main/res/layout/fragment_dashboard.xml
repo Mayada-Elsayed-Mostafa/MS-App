@@ -50,7 +50,7 @@
                             android:layout_height="48dp"
                             android:src="@drawable/mri_icon"
                             android:layout_gravity="center"
-                            app:tint="@color/dark_blue" />
+                            app:tint="@color/healthBlue" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                             android:textSize="18sp"
                             android:layout_gravity="center"
                             android:text="MRI"
-                            android:textColor="@color/dark_blue"/>
+                            android:textColor="@color/healthDarkBlue"/>
 
                     </LinearLayout>
 
@@ -88,7 +88,7 @@
                             android:layout_height="48dp"
                             android:src="@drawable/edss"
                             android:layout_gravity="center"
-                            app:tint="@color/dark_blue" />
+                            app:tint="@color/healthBlue" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
                             android:layout_gravity="center"
                             android:textSize="18sp"
                             android:text="EDSS"
-                            android:textColor="@color/dark_blue"/>
+                            android:textColor="@color/healthDarkBlue"/>
 
                     </LinearLayout>
 
@@ -134,7 +134,7 @@
                         android:layout_height="48dp"
                         android:src="@drawable/edss"
                         android:layout_gravity="center"
-                        app:tint="@color/dark_blue" />
+                        app:tint="@color/healthBlue" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
                         android:text="CIS"
                         android:layout_gravity="center"
                         android:textSize="18sp"
-                        android:textColor="@color/dark_blue"/>
+                        android:textColor="@color/healthDarkBlue"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -170,7 +170,7 @@
                         android:layout_height="48dp"
                         android:src="@drawable/monitoring"
                         android:layout_gravity="center"
-                        app:tint="@color/dark_blue" />
+                        app:tint="@color/healthBlue" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
                         android:layout_gravity="center"
                         android:textSize="18sp"
                         android:text="Monitoring"
-                        android:textColor="@color/dark_blue"/>
+                        android:textColor="@color/healthDarkBlue"/>
 
                 </LinearLayout>
 
