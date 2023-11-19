@@ -36,11 +36,6 @@ class CommunityActivity : AppCompatActivity() {
 
     private fun onMenuItemClick(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_profile -> {
-                val intent = Intent(this, ProfileActivity::class.java)
-                startActivity(intent)
-                return true
-            }
             R.id.menu_notifications -> {
                 val intent = Intent(this, NotificationActivity::class.java)
                 startActivity(intent)

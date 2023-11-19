@@ -26,7 +26,7 @@
     <style name="Theme.MSApplication" parent="Base.Theme.MSApplication" />
 
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/img1</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/img_1</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.MSApplication</item>
     </style>
 
