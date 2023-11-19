@@ -54,4 +54,6 @@
     <string name="tell_us_what_you_think">Tell us what you think</string>
     <string name="feedback_and_faq">FEEDBACK AND FAQ</string>
     <string name="new_messages_mentions_and_match_requests">New messages, mentions and match requests</string>
+    <string name="my_medical_info">My Medical info</string>
+    <string name="medical_info">Medical Info</string>
 </resources>
