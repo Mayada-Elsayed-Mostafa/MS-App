@@ -44,6 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profile_img"
+            android:hint="@string/user_name"
             android:gravity="center"/>
 
         <TextView
@@ -56,6 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name_tv"
+            android:hint="@string/email"
             android:gravity="center"/>
 
         <LinearLayout
