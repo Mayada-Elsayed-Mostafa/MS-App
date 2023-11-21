@@ -7,7 +7,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -26,8 +25,10 @@ class ProfileActivity : AppCompatActivity() {
         val userName = findViewById<TextView>(R.id.name_tv)
         val email = findViewById<TextView>(R.id.email_tv)
 
-        if (currentUser != null) {
-            val userId = currentUser.uid
+        val userId = intent.getStringExtra("UID")
+
+        if (currentUser != null && userId != null) {
+            Log.d("ProfileActivity", "Received UID: $userId")
 
             db.collection("users")
                 .document(userId)
@@ -59,6 +60,8 @@ class ProfileActivity : AppCompatActivity() {
                 .addOnFailureListener { exception ->
                     Log.w("ProfileActivity", "Error getting document", exception)
                 }
+        } else {
+            Log.d("ProfileActivity", "Current user or UID is null")
         }
 
         val documentsCard = findViewById<LinearLayout>(R.id.documents_card)
@@ -66,6 +69,5 @@ class ProfileActivity : AppCompatActivity() {
             val intentToDocumentsPage = Intent(this, DocumentsActivity::class.java)
             startActivity(intentToDocumentsPage)
         }
-
     }
 }
