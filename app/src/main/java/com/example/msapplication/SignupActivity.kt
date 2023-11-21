@@ -1,8 +1,6 @@
 package com.example.msapplication
 
-import android.content.ContentValues.TAG
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,6 +8,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -45,7 +44,7 @@ class SignupActivity : AppCompatActivity() {
 
         // Check the login state when the SignupActivity is opened
         if (isLoggedIn()) {
-            navigateToHome()
+            navigateToHome(null)
         }
 
         signUpBtn.setOnClickListener {
@@ -56,12 +55,15 @@ class SignupActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 progressSignUp.visibility = View.VISIBLE
 
-                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
-                    if (it.isSuccessful) {
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
                         // Save login state
                         saveLoginState(true)
 
                         Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_LONG).show()
+
+                        // Retrieve UID of the newly created user
+                        val uid = auth.currentUser?.uid
 
                         // Create a new user with a username and email
                         val user = hashMapOf(
@@ -69,20 +71,23 @@ class SignupActivity : AppCompatActivity() {
                             "email" to email
                         )
 
-                        // Add a new document with a generated ID
-                        db.collection("users")
-                            .add(user)
-                            .addOnSuccessListener { documentReference ->
-                                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w(TAG, "Error adding document", e)
-                            }
+                        // Add a new document with the UID as the document ID
+                        uid?.let {
+                            db.collection("users")
+                                .document(it)
+                                .set(user)
+                                .addOnSuccessListener {
+                                    Log.d("SignupActivity", "DocumentSnapshot added with ID: $it")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("SignupActivity", "Error adding document", e)
+                                }
+                        }
 
                         progressSignUp.visibility = View.GONE
-                        navigateToHome()
+                        navigateToHome(uid)
                     } else {
-                        Toast.makeText(applicationContext, it.exception.toString(), Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, task.exception.toString(), Toast.LENGTH_LONG).show()
                     }
                 }
             } else {
@@ -103,9 +108,13 @@ class SignupActivity : AppCompatActivity() {
         return sharedPreferences.getBoolean("isLoggedIn", false)
     }
 
-    private fun navigateToHome() {
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
+    private fun navigateToHome(uid: String?) {
+        val intentToHomeActivity = Intent(this, HomeActivity::class.java)
+        // Pass UID to HomeActivity if it's not null
+        uid?.let {
+            intentToHomeActivity.putExtra("UID", it)
+        }
+        startActivity(intentToHomeActivity)
         finish()
     }
 }

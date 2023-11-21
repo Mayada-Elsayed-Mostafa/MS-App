@@ -1,11 +1,12 @@
 package com.example.msapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
@@ -14,6 +15,10 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
     private val sharedPreferences by lazy {
         getSharedPreferences("MyPrefs", MODE_PRIVATE)
+    }
+
+    companion object {
+        const val REQUEST_CODE_HOME = 1001
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Check the login state when the LoginActivity is opened
         if (isLoggedIn()) {
-            navigateToHome()
+            navigateToHome(null)
         }
 
         loginBtn.setOnClickListener {
@@ -42,11 +47,18 @@ class LoginActivity : AppCompatActivity() {
             val password = passwordEd.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                    if (it.isSuccessful) {
+                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
                         // Save login state
                         saveLoginState(true)
-                        navigateToHome()
+
+                        // Retrieve UID of the logged-in user
+                        val uid = mAuth.currentUser?.uid
+
+                        // Pass UID to home activity
+                        navigateToHome(uid)
+                    } else {
+                        Toast.makeText(applicationContext, "Authentication failed.", Toast.LENGTH_LONG).show()
                     }
                 }
             } else {
@@ -67,9 +79,19 @@ class LoginActivity : AppCompatActivity() {
         return sharedPreferences.getBoolean("isLoggedIn", false)
     }
 
-    private fun navigateToHome() {
+    private fun navigateToHome(uid: String?) {
         val intentToHomeActivity = Intent(this, HomeActivity::class.java)
-        startActivity(intentToHomeActivity)
+        // Pass UID to HomeActivity
+        intentToHomeActivity.putExtra("UID", uid)
+        startActivity(this, intentToHomeActivity, null)
         finish()
+    }
+
+    // Handle the result when returning from HomeActivity
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_HOME && resultCode == RESULT_OK) {
+            // Handle any logic if needed after returning from HomeActivity
+        }
     }
 }
