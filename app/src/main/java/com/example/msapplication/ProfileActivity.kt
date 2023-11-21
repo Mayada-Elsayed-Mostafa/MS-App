@@ -1,12 +1,11 @@
 package com.example.msapplication
 
-import android.content.ContentValues.TAG
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -15,14 +14,13 @@ import com.google.firebase.ktx.Firebase
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private var db = Firebase.firestore
+    private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
         auth = FirebaseAuth.getInstance()
-        db = FirebaseFirestore.getInstance()
 
         val currentUser = auth.currentUser
         val userName = findViewById<TextView>(R.id.name_tv)
@@ -35,15 +33,31 @@ class ProfileActivity : AppCompatActivity() {
                 .document(userId)
                 .get()
                 .addOnSuccessListener { document ->
-                    if (document != null) {
-                        userName.text = document.getString("username")
-                        email.text = document.getString("email")
+                    if (document != null && document.exists()) {
+                        val username = document.getString("username")
+                        val userEmail = document.getString("email")
+
+                        Log.d("ProfileActivity", "Document data: $document")
+
+                        if (username != null) {
+                            userName.text = username
+                            Log.d("ProfileActivity", "Username: $username")
+                        } else {
+                            Log.d("ProfileActivity", "Username is null")
+                        }
+
+                        if (userEmail != null) {
+                            email.text = userEmail
+                            Log.d("ProfileActivity", "Email: $userEmail")
+                        } else {
+                            Log.d("ProfileActivity", "Email is null")
+                        }
                     } else {
-                        Log.d(TAG, "No such document")
+                        Log.d("ProfileActivity", "No such document")
                     }
                 }
                 .addOnFailureListener { exception ->
-                    Log.w(TAG, "Error getting document", exception)
+                    Log.w("ProfileActivity", "Error getting document", exception)
                 }
         }
 
