@@ -63,31 +63,36 @@ class SignupActivity : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Successfully", Toast.LENGTH_LONG).show()
 
                         // Retrieve UID of the newly created user
-                        val uid = auth.currentUser?.uid
+                        val user = auth.currentUser
+                        val uid = user?.uid
 
-                        // Create a new user with a username and email
-                        val user = hashMapOf(
-                            "username" to username,
-                            "email" to email
-                        )
+                        if (uid != null) {
+                            // Create a new user with a username and email
+                            val userData = hashMapOf(
+                                "username" to username,
+                                "email" to email
+                            )
 
-                        // Add a new document with the UID as the document ID
-                        uid?.let {
+                            // Add a new document with the UID as the document ID
                             db.collection("users")
-                                .document(it)
-                                .set(user)
+                                .document(uid)
+                                .set(userData)
                                 .addOnSuccessListener {
-                                    Log.d("SignupActivity", "DocumentSnapshot added with ID: $it")
+                                    Log.d("SignupActivity", "DocumentSnapshot added with ID: $uid")
                                 }
                                 .addOnFailureListener { e ->
                                     Log.w("SignupActivity", "Error adding document", e)
                                 }
-                        }
 
-                        progressSignUp.visibility = View.GONE
-                        navigateToHome(uid)
+                            progressSignUp.visibility = View.GONE
+                            navigateToHome(uid)
+                        } else {
+                            // Handle the scenario where UID is unexpectedly null
+                            Log.e("SignupActivity", "UID is unexpectedly null after successful authentication")
+                        }
                     } else {
-                        Toast.makeText(applicationContext, task.exception.toString(), Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, task.exception?.message ?: "Authentication failed", Toast.LENGTH_LONG).show()
+                        progressSignUp.visibility = View.GONE
                     }
                 }
             } else {
