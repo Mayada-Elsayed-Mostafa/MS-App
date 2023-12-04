@@ -3,25 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="@dimen/_16sdp">
 
     <EditText
         android:id="@+id/eventName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Event Name" />
+        android:hint="@string/event_name" />
 
     <EditText
         android:id="@+id/eventDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Event Description" />
+        android:hint="@string/event_description" />
 
 
     <Button
         android:id="@+id/saveEventButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Event" />
+        android:text="@string/save_event" />
 
 </LinearLayout>

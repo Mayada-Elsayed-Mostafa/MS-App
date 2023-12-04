@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="@dimen/_16sdp">
 
     <EditText
         android:id="@+id/editTextTitle"
@@ -19,17 +17,17 @@
         android:id="@+id/editTextNoteDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:hint="@string/enter_note_details"
-        android:inputType="textMultiLine"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/buttonSaveNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginTop="16dp"
-        android:text="@string/save"/>
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/save" />
 
 </LinearLayout>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +8,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="perform simple tasks on your smartphone with the aim of understanding the effects of MS on mood, cognition, hand-motor function, postural stability, and gait."
-        android:textSize="16sp"/>
+        android:text="@string/perform_simple_tasks_on_your_smartphone_with_the_aim_of_understanding_the_effects_of_ms_on_mood_cognition_hand_motor_function_postural_stability_and_gait"
+        android:textSize="16sp" />
 </LinearLayout>

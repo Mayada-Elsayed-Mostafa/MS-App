@@ -64,4 +64,11 @@
     <string name="change">Change</string>
     <string name="treatments">Treatments</string>
     <string name="are_you_ready_to_take_your_first_step_towards_managing_multiple_sclerosis_with_us">Are you ready to take your first step towards managing multiple sclerosis with us?</string>
+    <string name="perform_simple_tasks_on_your_smartphone_with_the_aim_of_understanding_the_effects_of_ms_on_mood_cognition_hand_motor_function_postural_stability_and_gait">perform simple tasks on your smartphone with the aim of understanding the effects of MS on mood, cognition, hand-motor function, postural stability, and gait.</string>
+    <string name="an_mri_magnetic_resonance_imaging_of_the_brain_is_a_key_diagnostic_tool_used_in_the_evaluation_of_ms">An MRI (Magnetic Resonance Imaging) of the brain is a key diagnostic tool used in the evaluation of MS.</string>
+    <string name="your_notification_feed_is_empty_stay_tuned_for_updates_and_messages">Your notification feed is empty. Stay tuned for updates and messages!</string>
+    <string name="event_name">Event Name</string>
+    <string name="event_description">Event Description</string>
+    <string name="save_event">Save Event</string>
+    <string name="multiple_sclerosis_management">Multiple Sclerosis Management</string>
 </resources>
