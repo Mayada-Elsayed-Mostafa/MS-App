@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/appointment_title"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="@string/date_and_time"
             android:textColor="@android:color/darker_gray"
-            android:textSize="14sp" />
+            android:textSize="@dimen/_10ssp" />
 
     </LinearLayout>
 

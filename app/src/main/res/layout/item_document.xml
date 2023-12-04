@@ -10,7 +10,7 @@
         android:id="@+id/documentTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold" />
 
     <TextView
@@ -18,5 +18,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8sdp"
-        android:textSize="14sp" />
+        android:textSize="@dimen/_10ssp" />
 </LinearLayout>

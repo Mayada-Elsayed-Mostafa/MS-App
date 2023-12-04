@@ -22,7 +22,7 @@
         android:layout_below="@id/imageView"
         android:gravity="center"
         android:text="@string/are_you_ready_to_take_your_first_step_towards_managing_multiple_sclerosis_with_us"
-        android:textSize="24sp" />
+        android:textSize="@dimen/_20ssp" />
 
     <Button
         android:id="@+id/signUp_btn"
@@ -32,7 +32,7 @@
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:text="@string/sign_up"
-        android:textSize="18sp" />
+        android:textSize="@dimen/_14ssp" />
 
     <Button
         android:id="@+id/logIn_btn"
@@ -44,6 +44,6 @@
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_50sdp"
         android:text="@string/log_in"
-        android:textSize="18sp" />
+        android:textSize="@dimen/_14ssp" />
 
 </RelativeLayout>

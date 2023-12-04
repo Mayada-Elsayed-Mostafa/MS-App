@@ -21,7 +21,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q: What is Multiple Sclerosis (MS)?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -45,7 +45,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q: What are the common symptoms of MS?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -69,7 +69,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How is Multiple Sclerosis diagnosed?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -93,7 +93,7 @@
             android:paddingTop="@dimen/_4sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  H Is there a cure for Multiple Sclerosis?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -117,7 +117,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  What can I do to manage MS symptoms?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -141,7 +141,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  Can I continue to work with MS?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -165,7 +165,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How can I get involved in MS advocacy and support groups?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -189,7 +189,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  Are there dietary recommendations for people with MS?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -213,7 +213,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  What is a relapse in MS?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View
@@ -237,7 +237,7 @@
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How can I support a loved one with MS?"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <View

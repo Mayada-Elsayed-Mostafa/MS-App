@@ -27,7 +27,7 @@
                 android:text="@string/settings"
                 android:textAlignment="center"
                 android:textColor="@color/healthDarkBlue"
-                android:textSize="20sp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold" />
 
         </com.google.android.material.appbar.MaterialToolbar>
@@ -65,7 +65,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/profile_visibility"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_12ssp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/show_your_profile_to_other_members"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <Switch
                             android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/notifications"
                         android:textAllCaps="true"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_12ssp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/messages"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <Switch
                             android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/feedback_and_faq"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_12ssp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -178,7 +178,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/tell_us_what_you_think"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -205,7 +205,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/learn_more_with_our_faq"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/_14ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -237,7 +237,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/legal"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_12ssp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -250,7 +250,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/privacy_policy"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -277,7 +277,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/terms_of_use"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -297,7 +297,7 @@
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
                 android:text="@string/logout"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_14ssp" />
 
             <TextView
                 android:id="@+id/delete_account_tv"
@@ -308,7 +308,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/_16sdp"
                 android:text="@string/delete_my_account"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_14ssp" />
 
         </LinearLayout>
 

@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/create_a_new_account"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/_20ssp"
                     android:textStyle="bold" />
 
 
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
                 android:text="@string/sign_up"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_14ssp" />
 
             <LinearLayout
                 android:id="@+id/agree_tv"
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/you_have_an_account"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:id="@+id/sign_in_tv"
@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:text="@string/sign_in"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textStyle="bold" />
 
             </LinearLayout>

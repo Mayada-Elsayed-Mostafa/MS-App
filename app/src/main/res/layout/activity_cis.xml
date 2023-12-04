@@ -33,6 +33,6 @@
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"
         android:text="do a test"
-        android:textSize="18sp" />
+        android:textSize="@dimen/_14ssp" />
 
 </RelativeLayout>

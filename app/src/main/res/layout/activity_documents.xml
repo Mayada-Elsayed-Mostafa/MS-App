@@ -21,7 +21,9 @@
             android:layout_height="wrap_content"
             android:text="@string/documents"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

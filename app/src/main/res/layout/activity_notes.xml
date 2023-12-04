@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:text="@string/notes"
             android:textColor="@color/healthDarkBlue"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16ssp"
             android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>

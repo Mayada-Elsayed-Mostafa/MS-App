@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:text="Please Fill This Form"
-        android:textSize="24sp"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold" />
 
     <ScrollView
@@ -478,7 +478,7 @@
                 android:layout_marginBottom="@dimen/_16sdp"
                 android:gravity="center"
                 android:hint="prediction :"
-                android:textSize="24sp" />
+                android:textSize="@dimen/_20ssp" />
 
         </LinearLayout>
 

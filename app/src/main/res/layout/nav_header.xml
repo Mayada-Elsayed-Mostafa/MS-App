@@ -26,6 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_16sdp"
         android:text="@string/mayyadaelsayed8_gmail_com"
-        android:textSize="14sp" />
+        android:textSize="@dimen/_10ssp" />
 
 </LinearLayout>

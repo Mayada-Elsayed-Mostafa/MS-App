@@ -9,6 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/an_mri_magnetic_resonance_imaging_of_the_brain_is_a_key_diagnostic_tool_used_in_the_evaluation_of_ms"
-        android:textSize="18sp" />
+        android:textSize="@dimen/_14ssp" />
 
 </LinearLayout>

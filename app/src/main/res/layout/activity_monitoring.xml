@@ -9,5 +9,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/perform_simple_tasks_on_your_smartphone_with_the_aim_of_understanding_the_effects_of_ms_on_mood_cognition_hand_motor_function_postural_stability_and_gait"
-        android:textSize="16sp" />
+        android:textSize="@dimen/_12ssp" />
 </LinearLayout>

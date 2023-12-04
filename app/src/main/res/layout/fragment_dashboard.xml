@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16sdp"
         android:text="@string/multiple_sclerosis_management"
-        android:textSize="24sp" />
+        android:textSize="@dimen/_20ssp" />
 
 
     <LinearLayout
@@ -57,7 +57,7 @@
                     android:layout_gravity="center"
                     android:text="MRI"
                     android:textColor="@color/healthDarkBlue"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
 
             </LinearLayout>
 
@@ -95,7 +95,7 @@
                     android:layout_gravity="center"
                     android:text="EDSS"
                     android:textColor="@color/healthDarkBlue"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
 
             </LinearLayout>
 
@@ -141,7 +141,7 @@
                     android:layout_gravity="center"
                     android:text="CIS"
                     android:textColor="@color/healthDarkBlue"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -177,7 +177,7 @@
                     android:layout_gravity="center"
                     android:text="Monitoring"
                     android:textColor="@color/healthDarkBlue"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
 
             </LinearLayout>
 

@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/welcome_to_neuroms"
-                android:textSize="20sp" />
+                android:textSize="@dimen/_16ssp" />
 
         </androidx.appcompat.widget.Toolbar>
 

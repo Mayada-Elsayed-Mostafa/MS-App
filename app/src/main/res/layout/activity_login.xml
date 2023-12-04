@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/login_to_your_account"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/_20ssp"
                     android:textStyle="bold" />
 
             </com.google.android.material.appbar.MaterialToolbar>
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
                 android:text="@string/log_in"
-                android:textSize="18sp"
+                android:textSize="@dimen/_18ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password_ed" />
@@ -124,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/don_t_have_an_account"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:id="@+id/sign_in_tv"
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:text="@string/sign_up"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/continue_with_google"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
         </LinearLayout>
