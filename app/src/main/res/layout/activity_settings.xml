@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:elevation="4dp"
+            android:elevation="@dimen/_4sdp"
             app:layout_scrollFlags="scroll|enterAlways"
             app:navigationIcon="?android:attr/homeAsUpIndicator"
             app:titleTextColor="@color/black">
@@ -23,10 +23,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="@dimen/_8sdp"
                 android:text="@string/settings"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textColor="@color/healthDarkBlue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -46,29 +48,29 @@
                 android:id="@+id/profileVisibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
-                android:elevation="4dp"
-                android:paddingTop="16dp"
-                app:cardCornerRadius="4dp">
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:elevation="@dimen/_4sdp"
+                android:paddingTop="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="8dp">
+                    android:paddingHorizontal="@dimen/_8sdp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/profile_visibility"
                         android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -87,27 +89,28 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/notifications"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="8dp">
+                    android:paddingHorizontal="@dimen/_8sdp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/notifications"
                         android:textAllCaps="true"
                         android:textSize="16sp" />
@@ -115,7 +118,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -136,7 +139,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="@dimen/_8sdp"
                         android:text="@string/new_messages_mentions_and_match_requests" />
 
                 </LinearLayout>
@@ -146,28 +149,28 @@
                 android:id="@+id/feedback_faq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="8dp">
+                    android:paddingHorizontal="@dimen/_8sdp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/feedback_and_faq"
                         android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -187,14 +190,14 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="@dimen/_16sdp"
                         android:alpha="0.5" />
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -218,28 +221,28 @@
                 android:id="@+id/legal_card_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="8dp">
+                    android:paddingHorizontal="@dimen/_8sdp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/legal"
                         android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -259,14 +262,14 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="@dimen/_1sdp"
                         android:alpha="0.5" />
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
+                        android:layout_marginVertical="@dimen/_8sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -291,8 +294,8 @@
                 android:id="@+id/logout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
                 android:text="@string/logout"
                 android:textSize="18sp" />
 
@@ -300,10 +303,10 @@
                 android:id="@+id/delete_account_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="4dp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
                 android:gravity="center"
-                android:paddingBottom="16dp"
+                android:paddingBottom="@dimen/_16sdp"
                 android:text="@string/delete_my_account"
                 android:textSize="18sp" />
 
