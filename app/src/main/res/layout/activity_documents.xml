@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:elevation="4dp"
+        android:elevation="@dimen/_4sdp"
         app:layout_collapseMode="pin"
         app:navigationIcon="?android:attr/homeAsUpIndicator">
 
@@ -31,10 +31,10 @@
         android:layout_above="@id/fabAddDocuments"
         android:layout_below="@id/toolbar"
         android:clipToPadding="false"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <!-- ImageView to be shown when there are no documents -->
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_upload_file" />
 </RelativeLayout>
