@@ -11,7 +11,7 @@
         android:layout_height="@dimen/_250sdp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_75sdp"
         android:importantForAccessibility="no"
         android:src="@drawable/hospital_patient" />
 
@@ -32,7 +32,7 @@
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:text="@string/sign_up"
-        android:textSize="@dimen/_12ssp" />
+        android:textSize="@dimen/_14ssp" />
 
     <Button
         android:id="@+id/logIn_btn"
@@ -44,6 +44,6 @@
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_50sdp"
         android:text="@string/log_in"
-        android:textSize="@dimen/_12ssp" />
+        android:textSize="@dimen/_14ssp" />
 
 </RelativeLayout>
