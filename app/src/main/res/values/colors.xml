@@ -2,7 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
 
-
     <!-- Blue -->
     <color name="healthBlue">#3498db</color>
 
@@ -14,7 +13,6 @@
 
     <!-- Dark Blue (Darker variant) -->
     <color name="healthDarkBlue">#1f3a93</color>
-
 
     <!-- White -->
     <color name="healthWhite">#FFFFFFFF</color>
@@ -28,8 +26,6 @@
 
     <!-- Teal -->
     <color name="healthTeal">#008080</color>
-
-
 
     <color name="bright_blue">#129DE8</color>
 

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.msapplication.model.Document
 
 class DocumentsAdapter(private val documents: List<Document>) :
     RecyclerView.Adapter<DocumentsAdapter.ViewHolder>() {

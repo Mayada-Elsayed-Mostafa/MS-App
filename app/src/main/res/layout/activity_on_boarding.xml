@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:text="@string/previous"
         android:layout_marginBottom="4dp" />
 

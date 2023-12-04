@@ -1,0 +1,65 @@
+<resources>
+
+    <string name="notification">الاشعارات</string>
+    <string name="enter_your_post">ادخل منشورك</string>
+    <string name="appointments">المواعيد</string>
+    <string name="apply_changes">حفظ التغيرات</string>
+    <string name="address">العنوان :</string>
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="password">كلمه السر</string>
+    <string name="sign_up">انشاء حساب</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="continue_with_google">الاستمرار مع جوجل</string>
+    <string name="next">التالي</string>
+    <string name="previous">السابق</string>
+    <string name="skip">تخطي</string>
+    <string name="female">انثي</string>
+    <string name="profile_visibility">PROFILE VISIBILITY</string>
+    <string name="show_your_profile_to_other_members">اظهار ملفك الشخصي للاخرين</string>
+    <string name="messages">الرسائل</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="delete_my_account">حذف حسابي</string>
+    <string name="you_have_an_account">هل لديك حساب؟</string>
+    <string name="i_agree_to_the_terms_of_service_and_privacy_policy">I agree to the terms of service and privacy policy</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="password_confirmation">تأكيد كلمه السر</string>
+    <string name="email">الايميل</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="create_a_new_account">انشاء حساب جديد</string>
+    <string name="enter_note_details">ادخل التفاصيل</string>
+    <string name="save">حفظ</string>
+    <string name="enter_title">ادخل عنوان</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="faq">الاسئله الاكثر شيوعا</string>
+    <string name="share">المشاركه</string>
+    <string name="settings">الاعدادات</string>
+    <string name="appointments_events">المواعيد / الاحداث</string>
+    <string name="daily_notes">اليوميات</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="home">الرئيسيه</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="chats">الدردشات</string>
+    <string name="dashboard">اللوحه</string>
+    <string name="community">المجتمع</string>
+    <string name="welcome_to_neuroms">مرحبا بك في NeuroMS</string>
+    <string name="documents">الوثائق</string>
+    <string name="notes">الملاحظات</string>
+    <string name="legal">قانوني</string>
+    <string name="learn_more_with_our_faq">Learn more with our FAQ</string>
+    <string name="tell_us_what_you_think">Tell us what you think</string>
+    <string name="feedback_and_faq">FEEDBACK AND FAQ</string>
+    <string name="new_messages_mentions_and_match_requests">New messages, mentions and match requests</string>
+    <string name="my_medical_info">معلوماتي الطبيه</string>
+    <string name="medical_info">المعلومات الطبيه</string>
+    <string name="login_to_your_account">تسجيل الدخول ل حسابك</string>
+    <string name="get_started">لنبدأ</string>
+    <string name="welcome_to_our_app">مرحبا بك في تطبيقنا</string>
+    <string name="track_your_symptoms">تتبع اعراضك</string>
+    <string name="connect_with_others">تواصل مع الاخرين</string>
+    <string name="lets_get_started">دعنا نبدأ!</string>
+    <string name="change">تغيير</string>
+    <string name="treatments">العلاجات</string>
+
+
+</resources>

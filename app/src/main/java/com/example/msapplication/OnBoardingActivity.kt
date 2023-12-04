@@ -19,19 +19,19 @@ class OnBoardingActivity : AppCompatActivity() {
 
             when (position) {
                 0 -> {
-                    skipBtn.text = "skip"
+                    skipBtn.text = getString(R.string.skip)
                     skipBtn.visibility = View.VISIBLE
                     nextBtn.visibility = View.VISIBLE
                     previousBtn.visibility = View.GONE
                 }
                 3 -> {
-                    nextBtn.text = "Get Started"
+                    nextBtn.text = getString(R.string.get_started)
                     skipBtn.visibility = View.GONE
                     nextBtn.visibility = View.VISIBLE
                     previousBtn.visibility = View.VISIBLE
                 }
                 else -> {
-                    skipBtn.text = "skip"
+                    skipBtn.text = getString(R.string.skip)
                     skipBtn.visibility = View.VISIBLE
                     nextBtn.visibility = View.VISIBLE
                     previousBtn.visibility = View.VISIBLE
@@ -43,23 +43,19 @@ class OnBoardingActivity : AppCompatActivity() {
     private val pageList = arrayListOf(
         Page("Welcome to our app",
             R.drawable.logo,
-            "Thank you for choosing our app to help you manage multiple sclerosis. Let's get started!",
-            "#FFFFFF"),
+            "Thank you for choosing our app to help you manage multiple sclerosis. Let's get started!"),
 
         Page("Track Your Symptoms",
             R.drawable.diagnosis,
-            "Use our app to log your MS symptoms, such as fatigue, pain, and mobility issues. This will help you and your healthcare provider better understand your condition.",
-            "#FFFFFF"),
+            "Use our app to log your MS symptoms, such as fatigue, pain, and mobility issues. This will help you and your healthcare provider better understand your condition."),
 
         Page("Connect with Others",
             R.drawable.connecting_with_others,
-            "Join our community of people living with MS. Share experiences, ask questions, and find support from others who understand what you're going through.",
-            "#FFFFFF"),
+            "Join our community of people living with MS. Share experiences, ask questions, and find support from others who understand what you're going through."),
 
-        Page("Let's Get Started!",
+        Page("Let\'s Get Started!",
             R.drawable.hospital_patient,
-            "You're all set to begin your journey with our MS app. Tap \"Get Started\" to start tracking your symptoms and taking control of your MS.\n",
-            "#FFFFFF")
+            "You're all set to begin your journey with our MS app. Tap \"Get Started\" to start tracking your symptoms and taking control of your MS.\n")
     )
 
     lateinit var onBoardingViewPager2: ViewPager2

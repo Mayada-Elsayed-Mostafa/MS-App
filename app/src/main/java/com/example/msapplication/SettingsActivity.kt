@@ -1,7 +1,7 @@
 package com.example.msapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class SettingsActivity : AppCompatActivity() {

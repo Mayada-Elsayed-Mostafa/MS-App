@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat.startActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -25,13 +26,20 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        // Reference the Toolbar from the layout
+        val toolbar = findViewById<Toolbar>(R.id.signIn_toolbar!!)
+        toolbar.title = ""
+
+        // Set the Toolbar as the support action bar
+        setSupportActionBar(toolbar)
+
         mAuth = FirebaseAuth.getInstance()
 
         val loginBtn = findViewById<Button>(R.id.login_btn)
         val emailEd = findViewById<TextInputEditText>(R.id.email)
         val passwordEd = findViewById<TextInputEditText>(R.id.password)
 
-        val signUpTv = findViewById<TextView>(R.id.sign_in_tv!!)
+        val signUpTv = findViewById<TextView>(R.id.sign_in_tv)
         signUpTv.setOnClickListener {
             val intentToSignupActivity = Intent(this, SignupActivity::class.java)
             startActivity(intentToSignupActivity)
@@ -58,11 +66,19 @@ class LoginActivity : AppCompatActivity() {
                         // Pass UID to home activity
                         navigateToHome(uid)
                     } else {
-                        Toast.makeText(applicationContext, "Authentication failed.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "Authentication failed.",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
             } else {
-                Toast.makeText(applicationContext, "Enter your Email and Password to continue", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    applicationContext,
+                    "Enter your Email and Password to continue",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }
@@ -94,4 +110,5 @@ class LoginActivity : AppCompatActivity() {
             // Handle any logic if needed after returning from HomeActivity
         }
     }
+
 }

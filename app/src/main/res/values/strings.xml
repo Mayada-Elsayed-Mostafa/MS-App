@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">MS Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="open_nav">Open Navigation</string>
-    <string name="close_nav">Close Navigation</string>
+    <string name="app_name" translatable="false">MS Application</string>
+
+    <string name="open_nav" translatable="false">Open Navigation</string>
+    <string name="close_nav" translatable="false">Close Navigation</string>
     <string name="notification">Notification</string>
     <string name="enter_your_post">Enter your post</string>
     <string name="appointments">Appointments</string>
@@ -56,4 +55,12 @@
     <string name="new_messages_mentions_and_match_requests">New messages, mentions and match requests</string>
     <string name="my_medical_info">My Medical info</string>
     <string name="medical_info">Medical Info</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_to_our_app">Welcome to our app</string>
+    <string name="track_your_symptoms">Track Your Symptoms</string>
+    <string name="connect_with_others">Connect with Others</string>
+    <string name="lets_get_started">Let\'s Get Started!</string>
+    <string name="change">Change</string>
+    <string name="treatments">Treatments</string>
 </resources>

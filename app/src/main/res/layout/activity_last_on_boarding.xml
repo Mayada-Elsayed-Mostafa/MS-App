@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context=".LastOnBoardingActivity">
 
     <ImageView
@@ -15,37 +12,38 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/hospital_patient"/>
+        android:importantForAccessibility="no"
+        android:src="@drawable/hospital_patient" />
 
     <TextView
         android:id="@+id/ready_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
-        android:textSize="24sp"
         android:gravity="center"
-        android:text="Are you ready to take your first step towards managing multiple sclerosis with us?"/>
+        android:text="Are you ready to take your first step towards managing multiple sclerosis with us?"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/signUp_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/logIn_btn"
-        android:textSize="18sp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Sign Up"/>
+        android:text="@string/sign_up"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/logIn_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="50dp"
-        android:textSize="18sp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Log in"/>
+        android:layout_marginBottom="50dp"
+        android:text="@string/log_in"
+        android:textSize="18sp" />
 
 </RelativeLayout>

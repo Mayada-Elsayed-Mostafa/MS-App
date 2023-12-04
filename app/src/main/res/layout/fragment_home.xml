@@ -12,10 +12,9 @@
 
     <!-- Welcome Message -->
     <TextView
-        android:id="@+id/welcomeMessageTextView"
+        android:id="@+id/welcomeMessageTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to NeuroMS!\nWe're here to support you on your journey with Multiple Sclerosis."
         android:textSize="18sp"
         android:padding="16dp"/>
 

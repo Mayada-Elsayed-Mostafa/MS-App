@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,51 +10,52 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
         android:elevation="4dp"
         app:layout_collapseMode="pin"
-        android:layout_alignParentTop="true"
         app:navigationIcon="?android:attr/homeAsUpIndicator">
 
         <TextView
             android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/documents"
-            android:textSize="18sp"
-            android:layout_gravity="center" />
+            android:textAlignment="center"
+            android:textSize="18sp" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/fabAddDocuments"
+        android:layout_below="@id/toolbar"
         android:clipToPadding="false"
         android:paddingStart="8dp"
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_below="@id/toolbar"
-        android:layout_above="@id/fabAddDocuments"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <!-- ImageView to be shown when there are no documents -->
     <ImageView
         android:id="@+id/noDocuments_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/fabAddDocuments"
+        android:layout_below="@id/toolbar"
         android:layout_centerInParent="true"
         android:src="@drawable/add_document"
-        android:visibility="visible"
-        android:layout_above="@id/fabAddDocuments"
-        android:layout_below="@id/toolbar"/>
+        android:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddDocuments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_upload_file"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_upload_file" />
 </RelativeLayout>

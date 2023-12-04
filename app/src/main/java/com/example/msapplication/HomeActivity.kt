@@ -29,6 +29,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toolbar.title = ""
         setSupportActionBar(toolbar)
 
+        //val userName = intent.extras!!.get("UserName")
+
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)

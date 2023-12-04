@@ -19,6 +19,7 @@ class NotificationActivity : AppCompatActivity() {
 
         // Reference the Toolbar from the layout
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar.title = ""
 
         // Set the Toolbar as the support action bar
         setSupportActionBar(toolbar)

@@ -9,6 +9,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -23,6 +24,8 @@ class SignupActivity : AppCompatActivity() {
     }
     var db = Firebase.firestore
 
+    private lateinit var usernameEd: TextInputEditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -30,13 +33,20 @@ class SignupActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        val usernameEd = findViewById<TextInputEditText>(R.id.name)
+        // Reference the Toolbar from the layout
+        val toolbar = findViewById<Toolbar>(R.id.signUp_toolbar!!)
+        toolbar.title = ""
+
+        // Set the Toolbar as the support action bar
+        setSupportActionBar(toolbar)
+
+        usernameEd = findViewById(R.id.name)
         val emailEd = findViewById<TextInputEditText>(R.id.email)
         val passwordEd = findViewById<TextInputEditText>(R.id.password)
         val signUpBtn = findViewById<Button>(R.id.signUp_btn)
         val progressSignUp = findViewById<ProgressBar>(R.id.progress_bar_signUp)
 
-        val signIn = findViewById<TextView>(R.id.sign_in_tv!!)
+        val signIn = findViewById<TextView>(R.id.sign_in_tv)
         signIn.setOnClickListener {
             val intentToLoginActivity = Intent(this, LoginActivity::class.java)
             startActivity(intentToLoginActivity)
@@ -88,15 +98,26 @@ class SignupActivity : AppCompatActivity() {
                             navigateToHome(uid)
                         } else {
                             // Handle the scenario where UID is unexpectedly null
-                            Log.e("SignupActivity", "UID is unexpectedly null after successful authentication")
+                            Log.e(
+                                "SignupActivity",
+                                "UID is unexpectedly null after successful authentication"
+                            )
                         }
                     } else {
-                        Toast.makeText(applicationContext, task.exception?.message ?: "Authentication failed", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            task.exception?.message ?: "Authentication failed",
+                            Toast.LENGTH_LONG
+                        ).show()
                         progressSignUp.visibility = View.GONE
                     }
                 }
             } else {
-                Toast.makeText(applicationContext, "Enter your Email and Password to continue", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    applicationContext,
+                    "Enter your Email and Password to continue",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }
@@ -119,6 +140,7 @@ class SignupActivity : AppCompatActivity() {
         uid?.let {
             intentToHomeActivity.putExtra("UID", it)
         }
+        //intentToHomeActivity.putExtra("UserName", usernameEd.text.toString())
         startActivity(intentToHomeActivity)
         finish()
     }

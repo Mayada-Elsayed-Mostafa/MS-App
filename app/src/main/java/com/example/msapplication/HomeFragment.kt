@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.msapplication.model.Appointment
 
 class HomeFragment : Fragment() {
 
@@ -19,11 +21,13 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val userName = view.findViewById<TextView>(R.id.welcomeMessageTV)
+        userName.text = "Welcome Mayada"
         // Assuming you have a list of appointments
         val appointmentsList = listOf(
             Appointment("Meeting", "2023-11-15", "15:30"),
             Appointment("Doctor's Appointment", "2023-11-18", "10:00")
-            // Add more appointments as needed
+            // Add more appointments as needed 
         )
 
         // Initialize RecyclerView and set the adapter
