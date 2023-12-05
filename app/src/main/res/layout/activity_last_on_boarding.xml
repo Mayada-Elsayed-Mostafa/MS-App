@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
+        android:layout_marginHorizontal="@dimen/_24sdp"
         android:gravity="center"
         android:text="@string/are_you_ready_to_take_your_first_step_towards_managing_multiple_sclerosis_with_us"
         android:textSize="@dimen/_16ssp" />
@@ -29,8 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/logIn_btn"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
         android:text="@string/sign_up"
         android:textSize="@dimen/_14ssp" />
 
@@ -39,11 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_24sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/outlined_button_background"
         android:text="@string/log_in"
+        android:textColor="@color/healthDarkBlue"
         android:textSize="@dimen/_14ssp" />
 
 </RelativeLayout>

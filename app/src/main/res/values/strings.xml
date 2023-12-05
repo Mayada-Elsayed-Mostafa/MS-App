@@ -63,7 +63,7 @@
     <string name="lets_get_started">Thank you for choosing our app to help you manage multiple sclerosis. Let\'s get started!</string>
     <string name="lets">Let\'s get started!</string>
     <string name="change">Change</string>
-    <string name="treatments">Treatments</string>
+    <string name="treatments">Treatment Plan</string>
     <string name="are_you_ready_to_take_your_first_step_towards_managing_multiple_sclerosis_with_us">Are you ready to take your first step towards managing multiple sclerosis with us?</string>
     <string name="perform_simple_tasks_on_your_smartphone_with_the_aim_of_understanding_the_effects_of_ms_on_mood_cognition_hand_motor_function_postural_stability_and_gait">perform simple tasks on your smartphone with the aim of understanding the effects of MS on mood, cognition, hand-motor function, postural stability, and gait.</string>
     <string name="an_mri_magnetic_resonance_imaging_of_the_brain_is_a_key_diagnostic_tool_used_in_the_evaluation_of_ms">An MRI (Magnetic Resonance Imaging) of the brain is a key diagnostic tool used in the evaluation of MS.</string>
@@ -81,4 +81,11 @@
     <string name="begin">You\'re all set to begin your journey with our MS app. Tap "\Get Started\" to start tracking your symptoms and taking control of your MS.</string>
     <string name="join">Join our community of people living with MS. Share experiences, ask questions, and find support from others who understand what you\'re going through.</string>
     <string name="use_our_app">Use our app to log your MS symptoms, such as fatigue, pain, and mobility issues. This will help you and your healthcare provider better understand your condition.</string>
+    <string name="diet_and_nutrition_tracker">Diet and Nutrition Tracker</string>
+    <string name="daily_tips_and_insights">Daily Tips and Insights</string>
+    <string name="current_symptoms">Current Symptoms</string>
+    <string name="show">Show</string>
+    <string name="medications">Medications</string>
+    <string name="emergency_information">Emergency Information</string>
+    <string name="educational_resources">Educational Resources</string>
 </resources>

@@ -140,7 +140,7 @@
                 android:id="@+id/agree_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:orientation="horizontal">
 
                 <CheckBox

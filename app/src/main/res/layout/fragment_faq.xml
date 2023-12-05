@@ -18,7 +18,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q: What is Multiple Sclerosis (MS)?"
             android:textSize="@dimen/_12ssp"
@@ -26,7 +26,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:background="@color/healthDarkBlue"
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -34,7 +35,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Multiple Sclerosis is a chronic autoimmune disease that affects the central nervous system..."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 2: What are the symptoms of MS? -->
         <TextView
@@ -43,7 +44,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q: What are the common symptoms of MS?"
             android:textSize="@dimen/_12ssp"
@@ -51,7 +52,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -59,7 +60,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Common symptoms of MS include fatigue, muscle weakness, balance problems, and more..."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 3:  How is Multiple Sclerosis diagnosed? -->
         <TextView
@@ -68,7 +69,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How is Multiple Sclerosis diagnosed?"
             android:textSize="@dimen/_12ssp"
@@ -76,7 +77,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -84,7 +85,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• MS is typically diagnosed through a combination of medical history, neurological examinations, MRI scans, and sometimes a lumbar puncture (spinal tap). A diagnosis is made by a neurologist or a healthcare professional."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 4:   Is there a cure for Multiple Sclerosis? -->
         <TextView
@@ -101,7 +102,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -109,7 +110,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="•  Currently, there is no cure for MS. However, there are disease-modifying therapies (DMTs) that can help manage symptoms and slow the progression of the disease."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 5:  What can I do to manage MS symptoms? -->
         <TextView
@@ -118,7 +119,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  What can I do to manage MS symptoms?"
             android:textSize="@dimen/_12ssp"
@@ -126,7 +127,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -134,7 +135,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Managing MS often involves a combination of medications, physical therapy, lifestyle changes, and symptom management. Consult with your healthcare provider for a personalized treatment plan."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 6:  Can I continue to work with MS? -->
         <TextView
@@ -143,7 +144,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  Can I continue to work with MS?"
             android:textSize="@dimen/_12ssp"
@@ -151,7 +152,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -159,7 +160,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Many people with MS can continue to work, but accommodations and adjustments may be necessary. Discuss workplace accommodations and options with your employer and healthcare provider."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 7:  How can I get involved in MS advocacy and support groups? -->
         <TextView
@@ -168,7 +169,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How can I get involved in MS advocacy and support groups?"
             android:textSize="@dimen/_12ssp"
@@ -176,7 +177,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -184,7 +185,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• You can get involved by joining local MS support groups, participating in fundraising events, and connecting with organizations like the National Multiple Sclerosis Society for advocacy and resources."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 8:  Are there dietary recommendations for people with MS? -->
         <TextView
@@ -193,7 +194,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  Are there dietary recommendations for people with MS?"
             android:textSize="@dimen/_12ssp"
@@ -201,7 +202,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -209,7 +210,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Some people with MS find that dietary changes, such as a balanced and healthy diet, may help manage symptoms. Consult with a healthcare provider or nutritionist for personalized advice."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 9:  What is a relapse in MS? -->
         <TextView
@@ -218,7 +219,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  What is a relapse in MS?"
             android:textSize="@dimen/_12ssp"
@@ -226,7 +227,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -234,7 +235,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• A relapse, also known as a flare-up or exacerbation, is a sudden worsening of MS symptoms or the appearance of new symptoms. It's typically followed by periods of remission."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
         <!-- Question 10:  How can I support a loved one with MS? -->
         <TextView
@@ -243,7 +244,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="start"
-            android:paddingTop="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
             android:paddingBottom="@dimen/_4sdp"
             android:text="Q:  How can I support a loved one with MS?"
             android:textSize="@dimen/_12ssp"
@@ -251,7 +252,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp" />
+            android:layout_height="@dimen/_1sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -259,7 +260,7 @@
             android:lineSpacingExtra="@dimen/_4sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="• Supporting someone with MS involves understanding their condition, offering emotional support, helping with daily tasks, and being patient and compassionate."
-            android:textSize="@dimen/_8sdp" />
+            android:textSize="@dimen/_10sdp" />
 
     </LinearLayout>
 

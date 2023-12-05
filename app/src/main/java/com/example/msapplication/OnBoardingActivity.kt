@@ -25,7 +25,8 @@ class OnBoardingActivity : AppCompatActivity() {
         val welcome = getString(R.string.welcome_to_our_app).toString()
         val track = getString(R.string.track_your_symptoms).toString()
         val connect = getString(R.string.connect_with_others).toString()
-        val lets = getString(R.string.lets_get_started).toString()
+        val letsGetStarted = getString(R.string.lets_get_started).toString()
+        val lets = getString(R.string.lets).toString()
         val begin = getString(R.string.begin).toString()
         val join = getString(R.string.join).toString()
         val use_our_app = getString(R.string.use_our_app).toString()
@@ -34,7 +35,7 @@ class OnBoardingActivity : AppCompatActivity() {
             Page(
                 welcome,
                 R.drawable.logo,
-                lets
+                letsGetStarted
             ),
 
             Page(

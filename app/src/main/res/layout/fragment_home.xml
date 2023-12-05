@@ -1,34 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/_8sdp"
-    android:layout_marginEnd="@dimen/_8sdp"
-    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".HomeFragment">
 
-    <!-- Welcome Message -->
-    <TextView
-        android:id="@+id/welcomeMessageTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_16sdp"
-        android:textSize="@dimen/_14ssp" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:text="@string/appointments"
-        android:textSize="@dimen/_20ssp" />
+        android:orientation="vertical">
 
-    <!-- Appointments RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/appointmentsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp" />
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/welcomeMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_16sdp"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <!-- Daily Tips or Insights Section inside a CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dailyTipsCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:id="@+id/dailyTipsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <!-- Section Title -->
+                <TextView
+                    android:id="@+id/dailyTipsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/daily_tips_and_insights"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <!-- Displaying Daily Tip or Insight -->
+                <TextView
+                    android:id="@+id/dailyTipText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Symptom Tracker CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/symptomTrackerCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="@dimen/_16sdp">
+
+            <LinearLayout
+                android:id="@+id/symptomTrackerSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <!-- Section Title -->
+                <TextView
+                    android:id="@+id/symptomTrackerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="Symptom Tracker"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <!-- Visualizing Symptoms Over Time (Placeholder) -->
+                <ImageView
+                    android:id="@+id/symptomChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Appointments Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@string/appointments"
+            android:textSize="@dimen/_16ssp" />
+
+        <!-- Appointments RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/appointmentsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_16sdp" />
+
+    </LinearLayout>
+</ScrollView>

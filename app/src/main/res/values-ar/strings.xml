@@ -60,7 +60,7 @@
     <string name="lets_get_started">شكرًا لك على اختيار تطبيقنا لمساعدتك في إدارة مرض التصلب المتعدد. هيا بنا نبدأ!</string>
     <string name="lets">هيا بنا نبدأ!</string>
     <string name="change">تغيير</string>
-    <string name="treatments">وسائل العلاج</string>
+    <string name="treatments">خطة العلاج</string>
     <string name="are_you_ready_to_take_your_first_step_towards_managing_multiple_sclerosis_with_us">هل أنت مستعد لاتخاذ خطوتك الأولى نحو إدارة مرض التصلب المتعدد معنا؟</string>
     <string name="perform_simple_tasks_on_your_smartphone_with_the_aim_of_understanding_the_effects_of_ms_on_mood_cognition_hand_motor_function_postural_stability_and_gait">أداء مهام بسيطة على هاتفك الذكي بهدف فهم تأثيرات مرض التصلب العصبي المتعدد على الحالة المزاجية والإدراك والوظيفة الحركية اليدوية والاستقرار الوضعي والمشية.</string>
     <string name="an_mri_magnetic_resonance_imaging_of_the_brain_is_a_key_diagnostic_tool_used_in_the_evaluation_of_ms">يعد التصوير بالرنين المغناطيسي (MRI) للدماغ أداة تشخيصية رئيسية تستخدم في تقييم مرض التصلب العصبي المتعدد.</string>
@@ -78,5 +78,12 @@
     <string name="begin">أنت جاهز لبدء رحلتك باستخدام تطبيق MS الخاص بنا. اضغط على "البدء" لبدء تتبع أعراضك والسيطرة على مرض التصلب العصبي المتعدد لديك.</string>
     <string name="join">انضم إلى مجتمعنا من الأشخاص الذين يعيشون مع مرض التصلب العصبي المتعدد. شارك تجاربك، واطرح الأسئلة، وابحث عن الدعم من الآخرين الذين يفهمون ما تمر به.</string>
     <string name="use_our_app">استخدم تطبيقنا لتسجيل أعراض مرض التصلب العصبي المتعدد لديك، مثل التعب والألم ومشكلات الحركة. سيساعدك هذا ومقدم الرعاية الصحية الخاص بك على فهم حالتك بشكل أفضل.</string>
+    <string name="diet_and_nutrition_tracker">متتبع النظام الغذائي والتغذية</string>
+    <string name="daily_tips_and_insights">نصائح ورؤى يومية</string>
+    <string name="current_symptoms">الأعراض الحالية</string>
+    <string name="show">إظهار</string>
+    <string name="medications">الأدوية</string>
+    <string name="emergency_information">معلومات الطوارئ</string>
+    <string name="educational_resources">المصادر التعليمية</string>
 
 </resources>
