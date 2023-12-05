@@ -171,7 +171,7 @@
                     android:id="@+id/sign_in_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
                     android:text="@string/sign_in"
                     android:textColor="@color/healthBlue"
                     android:textSize="@dimen/_14ssp"
