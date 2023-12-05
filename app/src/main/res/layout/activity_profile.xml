@@ -305,6 +305,7 @@
             android:background="@drawable/outlined_button_background"
             android:text="@string/apply_changes"
             android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
