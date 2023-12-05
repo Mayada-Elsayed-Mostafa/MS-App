@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16sdp"
         android:text="@string/multiple_sclerosis_management"
-        android:textSize="@dimen/_20ssp" />
+        android:textSize="@dimen/_16ssp" />
 
 
     <LinearLayout

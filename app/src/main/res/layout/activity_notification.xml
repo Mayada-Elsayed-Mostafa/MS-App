@@ -41,7 +41,7 @@
             android:layout_marginHorizontal="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_16sdp"
             android:gravity="center"
-            android:text="@string/your_notification_feed_is_empty_stay_tuned_for_updates_and_messages"
+            android:text="@string/empty"
             android:textSize="@dimen/_14ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
