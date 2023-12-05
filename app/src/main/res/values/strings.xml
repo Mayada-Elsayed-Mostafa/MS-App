@@ -88,4 +88,7 @@
     <string name="medications">Medications</string>
     <string name="emergency_information">Emergency Information</string>
     <string name="educational_resources">Educational Resources</string>
+    <string name="enter_event_details">Enter Event Details</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="enter_time">Enter time of alarm</string>
 </resources>

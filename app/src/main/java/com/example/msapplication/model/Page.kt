@@ -1,4 +1,4 @@
-package com.example.msapplication
+package com.example.msapplication.model
 
 data class Page(
     val title: String,

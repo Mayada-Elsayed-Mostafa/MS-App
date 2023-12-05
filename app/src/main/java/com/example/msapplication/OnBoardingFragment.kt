@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.msapplication.model.Page
 
 class OnBoardingFragment(private val page: Page) : Fragment() {
 
