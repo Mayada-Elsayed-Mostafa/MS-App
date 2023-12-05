@@ -8,29 +8,27 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:elevation="@dimen/_4sdp"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:navigationIcon="?android:attr/homeAsUpIndicator"
-            app:titleTextColor="@color/black">
+            app:layout_collapseMode="pin"
+            app:navigationIcon="?android:attr/homeAsUpIndicator">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_gravity="center"
                 android:text="@string/settings"
-                android:textAlignment="center"
                 android:textColor="@color/healthDarkBlue"
                 android:textSize="@dimen/_16ssp"
                 android:textStyle="bold" />
 
-        </com.google.android.material.appbar.MaterialToolbar>
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -78,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/show_your_profile_to_other_members"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <Switch
                             android:layout_width="wrap_content"
@@ -126,7 +124,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/messages"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <Switch
                             android:layout_width="wrap_content"
@@ -140,7 +138,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_8sdp"
-                        android:text="@string/new_messages_mentions_and_match_requests" />
+                        android:text="@string/new_messages_mentions_and_match_requests"
+                        android:textSize="@dimen/_10sdp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -178,7 +177,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/tell_us_what_you_think"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -205,7 +204,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/learn_more_with_our_faq"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -213,8 +212,11 @@
                             android:layout_gravity="end"
                             android:backgroundTint="@color/healthWhite"
                             android:src="@drawable/ic_arrow_forward" />
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -250,7 +252,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/privacy_policy"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -258,6 +260,7 @@
                             android:layout_gravity="end"
                             android:backgroundTint="@color/healthWhite"
                             android:src="@drawable/ic_arrow_forward" />
+
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -277,7 +280,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/terms_of_use"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
@@ -287,28 +290,31 @@
                             android:src="@drawable/ic_arrow_forward" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/logout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
                 android:text="@string/logout"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_12ssp" />
 
-            <TextView
+            <Button
                 android:id="@+id/delete_account_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
                 android:gravity="center"
                 android:paddingBottom="@dimen/_16sdp"
+                android:background="@drawable/outlined_button_background"
                 android:text="@string/delete_my_account"
-                android:textSize="@dimen/_14ssp" />
+                android:textColor="@color/healthDarkBlue" />
 
         </LinearLayout>
 
