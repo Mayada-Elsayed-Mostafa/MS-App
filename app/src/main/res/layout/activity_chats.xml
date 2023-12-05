@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:title="Messages" />
+        app:title="@string/messages" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/chats_tabs"

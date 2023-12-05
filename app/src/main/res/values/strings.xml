@@ -75,4 +75,9 @@
     <string name="appointment_title">Appointment Title</string>
     <string name="mayada_elsayed">Mayada Elsayed</string>
     <string name="mayyadaelsayed8_gmail_com">mayyadaelsayed8@gmail.com</string>
+    <string name="direct_messages">Direct Messages</string>
+    <string name="groups">Groups</string>
+    <string name="begin">You\'re all set to begin your journey with our MS app. Tap "\Get Started\" to start tracking your symptoms and taking control of your MS.</string>
+    <string name="join">Join our community of people living with MS. Share experiences, ask questions, and find support from others who understand what you\'re going through.</string>
+    <string name="use_our_app">Use our app to log your MS symptoms, such as fatigue, pain, and mobility issues. This will help you and your healthcare provider better understand your condition.</string>
 </resources>

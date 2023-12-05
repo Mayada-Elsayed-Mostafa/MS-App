@@ -2,10 +2,9 @@ package com.example.msapplication
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -13,76 +12,95 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardingActivity : AppCompatActivity() {
 
-    private val OnBoardingPageChangeCallback = object: ViewPager2.OnPageChangeCallback(){
-        override fun onPageSelected(position: Int) {
-            super.onPageSelected(position)
-
-            when (position) {
-                0 -> {
-                    skipBtn.text = getString(R.string.skip)
-                    skipBtn.visibility = View.VISIBLE
-                    nextBtn.visibility = View.VISIBLE
-                    previousBtn.visibility = View.GONE
-                }
-                3 -> {
-                    nextBtn.text = getString(R.string.get_started)
-                    skipBtn.visibility = View.GONE
-                    nextBtn.visibility = View.VISIBLE
-                    previousBtn.visibility = View.VISIBLE
-                }
-                else -> {
-                    skipBtn.text = getString(R.string.skip)
-                    skipBtn.visibility = View.VISIBLE
-                    nextBtn.visibility = View.VISIBLE
-                    previousBtn.visibility = View.VISIBLE
-                }
-            }
-        }
-    }
-
-    private val pageList = arrayListOf(
-        Page("Welcome to our app",
-            R.drawable.logo,
-            "Thank you for choosing our app to help you manage multiple sclerosis. Let's get started!"),
-
-        Page("Track Your Symptoms",
-            R.drawable.diagnosis,
-            "Use our app to log your MS symptoms, such as fatigue, pain, and mobility issues. This will help you and your healthcare provider better understand your condition."),
-
-        Page("Connect with Others",
-            R.drawable.connecting_with_others,
-            "Join our community of people living with MS. Share experiences, ask questions, and find support from others who understand what you're going through."),
-
-        Page("Let\'s Get Started!",
-            R.drawable.hospital_patient,
-            "You're all set to begin your journey with our MS app. Tap \"Get Started\" to start tracking your symptoms and taking control of your MS.\n")
-    )
-
-    lateinit var onBoardingViewPager2: ViewPager2
+    private lateinit var onBoardingViewPager2: ViewPager2
     lateinit var nextBtn: Button
     lateinit var skipBtn: Button
     lateinit var previousBtn: Button
+    private lateinit var onBoardingPageChangeCallback: ViewPager2.OnPageChangeCallback
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+
+        val welcome = getString(R.string.welcome_to_our_app).toString()
+        val track = getString(R.string.track_your_symptoms).toString()
+        val connect = getString(R.string.connect_with_others).toString()
+        val lets = getString(R.string.lets_get_started).toString()
+        val begin = getString(R.string.begin).toString()
+        val join = getString(R.string.join).toString()
+        val use_our_app = getString(R.string.use_our_app).toString()
+
+        val pageList = arrayListOf(
+            Page(
+                welcome,
+                R.drawable.logo,
+                lets
+            ),
+
+            Page(
+                track,
+                R.drawable.diagnosis,
+                use_our_app
+            ),
+
+            Page(
+                connect,
+                R.drawable.connecting_with_others,
+                join
+            ),
+
+            Page(
+                lets,
+                R.drawable.hospital_patient,
+                begin
+            )
+        )
 
         onBoardingViewPager2 = findViewById(R.id.onboardingViewPager2)
         nextBtn = findViewById(R.id.next_btn)
         skipBtn = findViewById(R.id.skip_btn)
         previousBtn = findViewById(R.id.previous_btn)
 
+        val onBoardingPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+
+                when (position) {
+                    0 -> {
+                        skipBtn.text = getString(R.string.skip)
+                        skipBtn.visibility = android.view.View.VISIBLE
+                        nextBtn.visibility = android.view.View.VISIBLE
+                        previousBtn.visibility = android.view.View.GONE
+                    }
+
+                    3 -> {
+                        nextBtn.text = getString(R.string.get_started)
+                        skipBtn.visibility = android.view.View.GONE
+                        nextBtn.visibility = android.view.View.VISIBLE
+                        previousBtn.visibility = android.view.View.VISIBLE
+                    }
+
+                    else -> {
+                        skipBtn.text = getString(R.string.skip)
+                        skipBtn.visibility = android.view.View.VISIBLE
+                        nextBtn.visibility = android.view.View.VISIBLE
+                        previousBtn.visibility = android.view.View.VISIBLE
+                    }
+                }
+            }
+        }
+
         onBoardingViewPager2.apply {
             adapter = OnBoardingAdapter(this@OnBoardingActivity, pageList)
-            registerOnPageChangeCallback(OnBoardingPageChangeCallback)
+            registerOnPageChangeCallback(onBoardingPageChangeCallback)
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
-        TabLayoutMediator(tabLayout, onBoardingViewPager2){tab ,position -> }.attach()
+        TabLayoutMediator(tabLayout, onBoardingViewPager2) { tab, position -> }.attach()
 
         nextBtn.setOnClickListener {
-            if (onBoardingViewPager2.currentItem < onBoardingViewPager2.adapter!!.itemCount-1){
+            if (onBoardingViewPager2.currentItem < onBoardingViewPager2.adapter!!.itemCount - 1) {
                 onBoardingViewPager2.currentItem += 1
             } else {
                 onboardingCompleted()
@@ -109,7 +127,7 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        onBoardingViewPager2.unregisterOnPageChangeCallback(OnBoardingPageChangeCallback)
+        onBoardingViewPager2.unregisterOnPageChangeCallback(onBoardingPageChangeCallback)
         super.onDestroy()
     }
 
@@ -117,5 +135,4 @@ class OnBoardingActivity : AppCompatActivity() {
         val homeIntent = Intent(this, LastOnBoardingActivity::class.java)
         startActivity(homeIntent)
     }
-
 }

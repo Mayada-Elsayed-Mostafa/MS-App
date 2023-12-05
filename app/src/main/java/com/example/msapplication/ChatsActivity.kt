@@ -16,8 +16,8 @@ class ChatsActivity : AppCompatActivity() {
         tabLayout = findViewById(R.id.chats_tabs)
         viewPagerAdapter = findViewById(R.id.chats_viewPager)
 
-        tabLayout.addTab(tabLayout.newTab().setText("Direct Messages"))
-        tabLayout.addTab(tabLayout.newTab().setText("Groups"))
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.direct_messages).toString()))
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.groups).toString()))
 
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
