@@ -29,4 +29,14 @@
 
     <color name="bright_blue">#129DE8</color>
 
+
+    <!-- Dark Theme Colors -->
+    <color name="darkHealthBlue">#0D47A1</color>
+    <color name="darkHealthDarkBlue">#002171</color>
+    <color name="darkHealthGreen">#689F38</color>
+    <color name="darkHealthWhite">#FFFFFF</color>
+    <color name="darkHealthBlack">#000000</color>
+    <color name="darkHealthDarkGray">#757575</color>
+    <color name="darkHealthLightGray">#BDBDBD</color>
+
 </resources>

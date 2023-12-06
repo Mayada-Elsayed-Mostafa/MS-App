@@ -1,7 +1,24 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.MSApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary brand color for dark theme -->
+        <item name="colorPrimary">@color/darkHealthBlue</item>
+
+        <!-- Darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/darkHealthDarkBlue</item>
+
+        <!-- Accent color that complements the primary color for dark theme -->
+        <item name="colorAccent">@color/darkHealthGreen</item>
+
+        <!-- Background color for dark theme -->
+        <item name="android:windowBackground">@color/darkHealthBlack</item>
+
+        <!-- CardView background color for dark theme -->
+        <item name="cardBackgroundColor">@color/darkHealthBlack</item>
+
+        <!-- Text color for dark theme -->
+        <item name="android:textColor">@color/darkHealthLightGray</item>
+
     </style>
+
 </resources>

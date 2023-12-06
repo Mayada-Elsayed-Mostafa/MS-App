@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.msapplication.model.Event
 
 class EventAdapter(private val events: List<Event>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
@@ -22,7 +21,7 @@ class EventAdapter(private val events: List<Event>) : RecyclerView.Adapter<Event
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
         val event = events[position]
         holder.titleView.text = event.name
-        holder.descriptionView.text = event.description
+        holder.descriptionView.text = event.details // Use the correct property name
     }
 
     override fun getItemCount(): Int {
