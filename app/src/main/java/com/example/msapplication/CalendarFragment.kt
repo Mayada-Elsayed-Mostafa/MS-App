@@ -1,6 +1,8 @@
 package com.example.msapplication
 
 import android.app.AlertDialog
+import android.app.TimePickerDialog
+import android.content.ContentValues
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
@@ -22,6 +25,9 @@ class CalendarFragment : Fragment() {
     private lateinit var timeTextView: TextView
     private lateinit var saveEventButton: Button
     private lateinit var calendarView: CalendarView
+    private lateinit var timePicker: TimePickerDialog
+    private lateinit var dbHelper: EventDatabaseHelper
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +42,7 @@ class CalendarFragment : Fragment() {
         timeTextView = view.findViewById(R.id.tv_time)
         saveEventButton = view.findViewById(R.id.save_event_btn)
 
+
         // Set OnClickListener for dateTextView
         dateTextView.setOnClickListener {
             showDatePickerDialog()
@@ -45,7 +52,37 @@ class CalendarFragment : Fragment() {
             saveEvent()
         }
 
+        dbHelper = EventDatabaseHelper(requireContext())
+
+        // Set OnClickListener for timeTextView
+        timeTextView.setOnClickListener {
+            showTimePickerDialog()
+        }
+
         return view
+    }
+
+    private fun showTimePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val currentHour = calendar.get(Calendar.HOUR_OF_DAY)
+        val currentMinute = calendar.get(Calendar.MINUTE)
+
+        // Initialize TimePickerDialog
+        timePicker = TimePickerDialog(
+            requireContext(),
+            TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
+                // Update the timeTextView with the selected time
+                val formattedTime =
+                    String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute)
+                timeTextView.text = formattedTime
+            },
+            currentHour,
+            currentMinute,
+            true
+        )
+
+        // Show the TimePickerDialog
+        timePicker.show()
     }
 
     private fun showDatePickerDialog() {
@@ -88,10 +125,41 @@ class CalendarFragment : Fragment() {
         val date = dateTextView.text.toString()
         val time = timeTextView.text.toString()
 
-        // Implement your logic to save the event with the provided details
-        // For example, you can use a database to store the event
-        // You may also want to perform validation before saving
+        // Validate the input (you can add more validation as needed)
+        if (eventName.isEmpty() || date.isEmpty() || time.isEmpty()) {
+            // Show an error message
+            // For example, you can use a Toast
+            showToast("Please fill in all the details")
+            return
+        }
 
-        // Show a message or perform any other actions as needed
+        // Save the event to the database
+        val db = dbHelper.writableDatabase
+
+        val values = ContentValues().apply {
+            put(EventContract.EventEntry.COLUMN_NAME, eventName)
+            put(EventContract.EventEntry.COLUMN_DETAILS, eventDetails)
+            put(EventContract.EventEntry.COLUMN_DATE, date)
+            put(EventContract.EventEntry.COLUMN_TIME, time)
+        }
+
+        val newRowId = db?.insert(EventContract.EventEntry.TABLE_NAME, null, values)
+
+        // Close the database
+        db?.close()
+
+        // Show a success message
+        showToast("Event saved successfully")
+
+        // Clear the input fields
+        eventNameEditText.text = null
+        eventDetailsEditText.text = null
+        dateTextView.text = null
+        timeTextView.text = null
+    }
+
+    private fun showToast(message: String) {
+        // Implement your logic to show a Toast message
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 }
