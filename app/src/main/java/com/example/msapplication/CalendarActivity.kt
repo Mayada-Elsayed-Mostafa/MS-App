@@ -6,18 +6,16 @@ import android.content.ContentValues
 import android.os.Bundle
 import android.text.Editable
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class CalendarFragment : Fragment() {
+class CalendarActivity : AppCompatActivity() {
 
     private lateinit var eventNameEditText: TextInputEditText
     private lateinit var eventDetailsEditText: TextInputEditText
@@ -27,20 +25,15 @@ class CalendarFragment : Fragment() {
     private lateinit var timePicker: TimePickerDialog
     private lateinit var dbHelper: EventDatabaseHelper
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_calendar)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        val view = inflater.inflate(R.layout.fragment_calendar, container, false)
-
-        eventNameEditText = view.findViewById(R.id.name)
-        eventDetailsEditText = view.findViewById(R.id.details)
-        dateED = view.findViewById(R.id.date)
-        timeEd = view.findViewById(R.id.alarm)
-        saveEventButton = view.findViewById(R.id.save_event_btn)
-
+        eventNameEditText = findViewById(R.id.name)
+        eventDetailsEditText = findViewById(R.id.details)
+        dateED = findViewById(R.id.date)
+        timeEd = findViewById(R.id.alarm)
+        saveEventButton = findViewById(R.id.save_event_btn)
 
         // Set OnClickListener for dateTextView
         dateED.setOnClickListener {
@@ -51,16 +44,13 @@ class CalendarFragment : Fragment() {
             saveEvent()
         }
 
-        dbHelper = EventDatabaseHelper(requireContext())
+        dbHelper = EventDatabaseHelper(this)
 
         // Set OnClickListener for time
         timeEd.setOnClickListener {
             showTimePickerDialog()
         }
-
-        return view
     }
-
 
     private fun showTimePickerDialog() {
         val calendar = Calendar.getInstance()
@@ -69,7 +59,7 @@ class CalendarFragment : Fragment() {
 
         // Initialize TimePickerDialog using the class property
         timePicker = TimePickerDialog(
-            requireContext(),
+            this,
             { _, hourOfDay, minute ->
                 // Update the timeEd with the selected time
                 val formattedTime =
@@ -87,7 +77,8 @@ class CalendarFragment : Fragment() {
 
     private fun showDatePickerDialog() {
         // Inflate the custom layout for DatePicker
-        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_date_picker, null)
+        val dialogView =
+            LayoutInflater.from(this).inflate(R.layout.dialog_date_picker, null)
         val calendarView = dialogView.findViewById<CalendarView>(R.id.calendarView)
 
         // Initialize CalendarView
@@ -102,7 +93,7 @@ class CalendarFragment : Fragment() {
         }
 
         // Create an AlertDialog with the custom layout
-        val dialogBuilder = AlertDialog.Builder(requireContext())
+        val dialogBuilder = AlertDialog.Builder(this)
             .setTitle("Select Date")
             .setView(dialogView)
             .setPositiveButton("OK") { dialog, _ ->
@@ -167,6 +158,6 @@ class CalendarFragment : Fragment() {
 
     private fun showToast(message: String) {
         // Implement your logic to show a Toast message
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

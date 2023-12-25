@@ -35,12 +35,19 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav)
+        val toggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.open_nav,
+            R.string.close_nav
+        )
 
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navHostFragment.navController
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -53,6 +60,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     val communityIntent = Intent(this, CommunityActivity::class.java)
                     startActivity(communityIntent)
                 }
+
                 R.id.navigation_notes -> {
                     val notesIntent = Intent(this, NotesActivity::class.java)
                     startActivity(notesIntent)
@@ -95,22 +103,30 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val profileIntent = Intent(this, ProfileActivity::class.java)
                 startActivity(profileIntent)
             }
-            R.id.navigation_calendar-> replaceFragment(CalendarFragment())
+
+            R.id.navigation_calendar -> {
+                val calenderIntent = Intent(this, CalendarActivity::class.java)
+                startActivity(calenderIntent)
+            }
+
             R.id.nav_settings -> {
                 val settingsIntent = Intent(this, SettingsActivity::class.java)
                 startActivity(settingsIntent)
             }
+
             R.id.nav_share -> replaceFragment(ShareFragment())
             R.id.nav_about -> replaceFragment(FaqFragment())
             R.id.nav_notes -> {
                 val notesIntent = Intent(this, NotesActivity::class.java)
                 startActivity(notesIntent)
             }
+
             R.id.nav_logout -> handleLogout()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
     private fun handleLogout() {
         // Update user's state in SharedPreferences
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
