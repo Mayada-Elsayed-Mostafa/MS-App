@@ -4,12 +4,12 @@ import android.app.AlertDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.os.Bundle
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
@@ -21,8 +21,8 @@ class CalendarFragment : Fragment() {
 
     private lateinit var eventNameEditText: TextInputEditText
     private lateinit var eventDetailsEditText: TextInputEditText
-    private lateinit var dateTextView: TextView
-    private lateinit var timeTextView: TextView
+    private lateinit var dateED: TextInputEditText
+    private lateinit var timeEd: TextInputEditText
     private lateinit var saveEventButton: Button
     private lateinit var calendarView: CalendarView
     private lateinit var timePicker: TimePickerDialog
@@ -38,13 +38,13 @@ class CalendarFragment : Fragment() {
 
         eventNameEditText = view.findViewById(R.id.name)
         eventDetailsEditText = view.findViewById(R.id.details)
-        dateTextView = view.findViewById(R.id.tv_date)
-        timeTextView = view.findViewById(R.id.tv_time)
+        dateED = view.findViewById(R.id.date)
+        timeEd = view.findViewById(R.id.alarm)
         saveEventButton = view.findViewById(R.id.save_event_btn)
 
 
         // Set OnClickListener for dateTextView
-        dateTextView.setOnClickListener {
+        dateED.setOnClickListener {
             showDatePickerDialog()
         }
 
@@ -54,13 +54,14 @@ class CalendarFragment : Fragment() {
 
         dbHelper = EventDatabaseHelper(requireContext())
 
-        // Set OnClickListener for timeTextView
-        timeTextView.setOnClickListener {
+        // Set OnClickListener for time
+        timeEd.setOnClickListener {
             showTimePickerDialog()
         }
 
         return view
     }
+
 
     private fun showTimePickerDialog() {
         val calendar = Calendar.getInstance()
@@ -68,13 +69,13 @@ class CalendarFragment : Fragment() {
         val currentMinute = calendar.get(Calendar.MINUTE)
 
         // Initialize TimePickerDialog
-        timePicker = TimePickerDialog(
+        val timePicker = TimePickerDialog(
             requireContext(),
             TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
-                // Update the timeTextView with the selected time
+                // Update the timeEd with the selected time
                 val formattedTime =
                     String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute)
-                timeTextView.text = formattedTime
+                timeEd.text = Editable.Factory.getInstance().newEditable(formattedTime)
             },
             currentHour,
             currentMinute,
@@ -87,23 +88,23 @@ class CalendarFragment : Fragment() {
 
     private fun showDatePickerDialog() {
         // Initialize CalendarView
-        calendarView = CalendarView(requireContext())
+        val calendarView = CalendarView(requireContext())
 
         // Create an AlertDialog with CalendarView
         val dialogBuilder = AlertDialog.Builder(requireContext())
             .setTitle("Select Date")
             .setView(calendarView)
             .setPositiveButton("OK") { dialog, which ->
-                // Get the selected date and update the dateTextView
+                // Get the selected date and update the dateED
                 val selectedDateInMillis = calendarView.date
                 val selectedDate = formatDate(selectedDateInMillis)
-                dateTextView.text = selectedDate
+                dateED.text = Editable.Factory.getInstance().newEditable(selectedDate)
 
                 // Dismiss the dialog
                 dialog.dismiss()
             }
             .setNegativeButton("Cancel") { dialog, which ->
-                // Dismiss the dialog without updating the dateTextView
+                // Dismiss the dialog without updating the dateED
                 dialog.dismiss()
             }
 
@@ -122,8 +123,8 @@ class CalendarFragment : Fragment() {
     private fun saveEvent() {
         val eventName = eventNameEditText.text.toString()
         val eventDetails = eventDetailsEditText.text.toString()
-        val date = dateTextView.text.toString()
-        val time = timeTextView.text.toString()
+        val date = dateED.text.toString()
+        val time = timeEd.text.toString()
 
         // Validate the input (you can add more validation as needed)
         if (eventName.isEmpty() || date.isEmpty() || time.isEmpty()) {
@@ -154,8 +155,8 @@ class CalendarFragment : Fragment() {
         // Clear the input fields
         eventNameEditText.text = null
         eventDetailsEditText.text = null
-        dateTextView.text = null
-        timeTextView.text = null
+        dateED.text = null
+        timeEd.text = null
     }
 
     private fun showToast(message: String) {

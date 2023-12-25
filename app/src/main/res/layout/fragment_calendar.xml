@@ -133,12 +133,20 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_date"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:layout_marginTop="@dimen/_6sdp" />
+            android:paddingVertical="@dimen/_8sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter date"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
@@ -173,12 +181,21 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_time"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:layout_marginTop="@dimen/_6sdp" />
+            android:paddingVertical="@dimen/_8sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter time"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
     </LinearLayout>
 
