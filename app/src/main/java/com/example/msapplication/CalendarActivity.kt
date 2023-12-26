@@ -34,7 +34,7 @@ class CalendarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calendar)
 
         // Reference the Toolbar from the layout
-        val toolbar = findViewById<Toolbar>(R.id.calendarToolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = ""
 
         // Set the Toolbar as the support action bar
