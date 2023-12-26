@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.CalendarView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.example.msapplication.model.Appointment
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
@@ -33,20 +32,6 @@ class CalendarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
-        // Reference the Toolbar from the layout
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        toolbar.title = ""
-
-        // Set the Toolbar as the support action bar
-        setSupportActionBar(toolbar)
-
-        // Enable the back button (up button) in the action bar
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        // Handle the back button click event
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
 
         eventNameEditText = findViewById(R.id.name)
         eventDetailsEditText = findViewById(R.id.details)
