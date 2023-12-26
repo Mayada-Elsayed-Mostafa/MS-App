@@ -86,7 +86,9 @@
     <string name="emergency_information">معلومات الطوارئ</string>
     <string name="educational_resources">المصادر التعليمية</string>
     <string name="enter_event_details">أدخل تفاصيل الحدث</string>
-    <string name="enter_date">Enter Date</string>
-    <string name="enter_time">Enter time of alarm</string>
+    <string name="enter_date">أدخل التاريخ</string>
+    <string name="enter_time">أدخل وقت التنبيه</string>
+    <string name="enter_the_event_details">أدخل تفاصيل الحدث</string>
+    <string name="enter_the_event_name">أدخل اسم الحدث</string>
 
 </resources>

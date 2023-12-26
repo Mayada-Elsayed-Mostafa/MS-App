@@ -91,4 +91,6 @@
     <string name="enter_event_details">Enter Event Details</string>
     <string name="enter_date">Enter Date</string>
     <string name="enter_time">Enter time of alarm</string>
+    <string name="enter_the_event_details">Enter the event details</string>
+    <string name="enter_the_event_name">Enter the event name</string>
 </resources>
