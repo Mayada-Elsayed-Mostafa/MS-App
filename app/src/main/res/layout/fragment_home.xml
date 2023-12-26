@@ -60,6 +60,24 @@
         </androidx.cardview.widget.CardView>
 
 
+        <!-- Appointments Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@string/appointments"
+            android:textSize="@dimen/_16ssp" />
+
+        <!-- Appointments RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/appointmentsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_16sdp" />
+
+
+
         <!-- Symptom Tracker CardView -->
         <androidx.cardview.widget.CardView
             android:id="@+id/symptomTrackerCardView"
@@ -96,22 +114,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-        <!-- Appointments Section -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:text="@string/appointments"
-            android:textSize="@dimen/_16ssp" />
-
-        <!-- Appointments RecyclerView -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/appointmentsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_16sdp" />
 
     </LinearLayout>
 </ScrollView>

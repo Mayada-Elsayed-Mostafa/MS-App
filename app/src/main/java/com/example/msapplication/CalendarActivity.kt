@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class CalendarActivity : AppCompatActivity() {
+class CalendarActivity : AppCompatActivity(), OnEventSavedListener {
 
     private lateinit var eventNameEditText: TextInputEditText
     private lateinit var eventDetailsEditText: TextInputEditText
@@ -32,33 +32,28 @@ class CalendarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
-
         eventNameEditText = findViewById(R.id.name)
         eventDetailsEditText = findViewById(R.id.details)
         dateED = findViewById(R.id.date)
         timeEd = findViewById(R.id.alarm)
         saveEventButton = findViewById(R.id.save_event_btn)
 
-        // Set OnClickListener for dateTextView
         dateED.setOnClickListener {
             showDatePickerDialog()
         }
 
-        // Set up the listener when creating the fragment
-        val homeFragment =
-            supportFragmentManager.findFragmentByTag(HomeFragment.TAG) as HomeFragment?
-        onEventSavedListener = homeFragment!!
+        onEventSavedListener = this // Set the activity itself as the listener
         saveEventButton.setOnClickListener {
             saveEvent()
         }
 
         dbHelper = EventDatabaseHelper(this)
 
-        // Set OnClickListener for time
         timeEd.setOnClickListener {
             showTimePickerDialog()
         }
     }
+
 
     private fun showTimePickerDialog() {
         val calendar = Calendar.getInstance()
@@ -71,8 +66,14 @@ class CalendarActivity : AppCompatActivity() {
             { _, hourOfDay, minute ->
                 // Update the timeEd with the selected time
                 val formattedTime =
-                    String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute)
-                timeEd.text = Editable.Factory.getInstance().newEditable(formattedTime)
+                    String.format(
+                        Locale.getDefault(),
+                        "%02d:%02d",
+                        hourOfDay,
+                        minute
+                    )
+                timeEd.text =
+                    Editable.Factory.getInstance().newEditable(formattedTime)
             },
             currentHour,
             currentMinute,
@@ -82,6 +83,7 @@ class CalendarActivity : AppCompatActivity() {
         // Show the TimePickerDialog
         timePicker.show()
     }
+
 
     private fun showDatePickerDialog() {
         // Inflate the custom layout for DatePicker
@@ -125,6 +127,15 @@ class CalendarActivity : AppCompatActivity() {
         return dateFormat.format(calendar.time)
     }
 
+    override fun onEventSaved(appointment: Appointment) {
+        // Notify the listener that an event has been saved
+        onEventSavedListener.onEventSaved(appointment)
+
+        // Update the Appointments RecyclerView in HomeFragment
+        val homeFragment =
+            supportFragmentManager.findFragmentByTag(HomeFragment.TAG) as HomeFragment?
+        homeFragment?.updateAppointmentsList(appointment)
+    }
 
     private fun saveEvent() {
         val eventName = eventNameEditText.text.toString()
@@ -176,7 +187,4 @@ class CalendarActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    interface OnEventSavedListener {
-        fun onEventSaved(appointment: Appointment)
-    }
 }

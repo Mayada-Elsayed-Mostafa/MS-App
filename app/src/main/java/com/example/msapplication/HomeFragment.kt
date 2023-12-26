@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.msapplication.model.Appointment
 
-class HomeFragment : Fragment(), CalendarActivity.OnEventSavedListener {
+class HomeFragment : Fragment(), OnEventSavedListener {
 
     private lateinit var appointmentsAdapter: AppointmentsAdapter
     private lateinit var dailyTipText: TextView
+    private lateinit var appointmentsRecyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +32,7 @@ class HomeFragment : Fragment(), CalendarActivity.OnEventSavedListener {
         updateDailyTip()
 
         // Initialize RecyclerView and set the adapter with an empty list
-        val appointmentsRecyclerView =
-            view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView)
+        appointmentsRecyclerView = view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView)
         appointmentsAdapter = AppointmentsAdapter()
         appointmentsRecyclerView.adapter = appointmentsAdapter
 
@@ -47,9 +47,16 @@ class HomeFragment : Fragment(), CalendarActivity.OnEventSavedListener {
         dailyTipText.text = DailyTipsManager.getDailyTip()
     }
 
+    fun updateAppointmentsList(appointment: Appointment) {
+        // Update the data set in your RecyclerView adapter
+        // You should have a method in your RecyclerView adapter to add the new appointment to the list
+        // For example, if you have a method named 'addAppointment' in your adapter, use it like this:
+        appointmentsAdapter.addAppointment(appointment)
+    }
+
     override fun onEventSaved(appointment: Appointment) {
         // Handle the saved event, e.g., update the RecyclerView
-        appointmentsAdapter.addAppointment(appointment)
+        updateAppointmentsList(appointment)
     }
 
     companion object {
