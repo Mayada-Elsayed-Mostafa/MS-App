@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.msapplication.model.Appointment
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), CalendarActivity.OnEventSavedListener {
 
     private lateinit var appointmentsAdapter: AppointmentsAdapter
     private lateinit var dailyTipText: TextView
@@ -30,17 +30,10 @@ class HomeFragment : Fragment() {
         dailyTipText = view.findViewById(R.id.dailyTipText)
         updateDailyTip()
 
-        // Assuming you have a list of appointments
-        val appointmentsList = listOf(
-            Appointment("Meeting", "2023-11-15", "15:30"),
-            Appointment("Doctor's Appointment", "2023-11-18", "10:00")
-            // Add more appointments as needed
-        )
-
-        // Initialize RecyclerView and set the adapter
+        // Initialize RecyclerView and set the adapter with an empty list
         val appointmentsRecyclerView =
             view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView)
-        appointmentsAdapter = AppointmentsAdapter(appointmentsList)
+        appointmentsAdapter = AppointmentsAdapter()
         appointmentsRecyclerView.adapter = appointmentsAdapter
 
         // Use requireContext() instead of this for obtaining the context
@@ -52,5 +45,14 @@ class HomeFragment : Fragment() {
     private fun updateDailyTip() {
         // Set the daily tip text using DailyTipsManager
         dailyTipText.text = DailyTipsManager.getDailyTip()
+    }
+
+    override fun onEventSaved(appointment: Appointment) {
+        // Handle the saved event, e.g., update the RecyclerView
+        appointmentsAdapter.addAppointment(appointment)
+    }
+
+    companion object {
+        const val TAG = "HomeFragment"
     }
 }

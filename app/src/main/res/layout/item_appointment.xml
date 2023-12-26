@@ -12,21 +12,38 @@
         android:orientation="vertical"
         android:padding="@dimen/_16sdp">
 
+
         <TextView
-            android:id="@+id/appointmentTitleTextView"
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/appointment_title"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/appointmentDateTimeTextView"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date_and_time"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="@dimen/_10ssp" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="@string/date_and_time"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_and_time"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

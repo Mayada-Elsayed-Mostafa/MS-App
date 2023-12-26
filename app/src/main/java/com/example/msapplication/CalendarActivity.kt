@@ -11,6 +11,7 @@ import android.widget.CalendarView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.msapplication.model.Appointment
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -25,13 +26,15 @@ class CalendarActivity : AppCompatActivity() {
     private lateinit var saveEventButton: Button
     private lateinit var timePicker: TimePickerDialog
     private lateinit var dbHelper: EventDatabaseHelper
+    private lateinit var onEventSavedListener: OnEventSavedListener
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
         // Reference the Toolbar from the layout
-        val toolbar = findViewById<Toolbar>(R.id.calendarToolbar!!)
+        val toolbar = findViewById<Toolbar>(R.id.calendarToolbar)
         toolbar.title = ""
 
         // Set the Toolbar as the support action bar
@@ -56,6 +59,10 @@ class CalendarActivity : AppCompatActivity() {
             showDatePickerDialog()
         }
 
+        // Set up the listener when creating the fragment
+        val homeFragment =
+            supportFragmentManager.findFragmentByTag(HomeFragment.TAG) as HomeFragment?
+        onEventSavedListener = homeFragment!!
         saveEventButton.setOnClickListener {
             saveEvent()
         }
@@ -133,6 +140,7 @@ class CalendarActivity : AppCompatActivity() {
         return dateFormat.format(calendar.time)
     }
 
+
     private fun saveEvent() {
         val eventName = eventNameEditText.text.toString()
         val eventDetails = eventDetailsEditText.text.toString()
@@ -162,6 +170,12 @@ class CalendarActivity : AppCompatActivity() {
         // Close the database
         db?.close()
 
+        // Use the newRowId as the 'id' for the new Appointment
+        val savedAppointment = Appointment(newRowId ?: -1, eventName, date, time)
+
+        // Notify the listener that an event has been saved
+        onEventSavedListener.onEventSaved(savedAppointment)
+
         // Show a success message
         showToast("Event saved successfully")
 
@@ -175,5 +189,9 @@ class CalendarActivity : AppCompatActivity() {
     private fun showToast(message: String) {
         // Implement your logic to show a Toast message
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    interface OnEventSavedListener {
+        fun onEventSaved(appointment: Appointment)
     }
 }
