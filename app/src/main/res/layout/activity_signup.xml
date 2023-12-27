@@ -135,7 +135,8 @@
                 android:layout_marginStart="@dimen/_2sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_8sdp">
+                android:layout_marginBottom="@dimen/_8sdp"
+                app:mrl_rippleRoundedCorners="@dimen/_18sdp">
 
                 <Button
                     android:id="@+id/signUp_btn"

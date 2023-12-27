@@ -108,7 +108,8 @@
                 android:layout_marginEnd="@dimen/_2sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password_ed">
+                app:layout_constraintTop_toBottomOf="@id/password_ed"
+                app:mrl_rippleRoundedCorners="@dimen/_18sdp">
 
                 <Button
                     android:id="@+id/login_btn"
