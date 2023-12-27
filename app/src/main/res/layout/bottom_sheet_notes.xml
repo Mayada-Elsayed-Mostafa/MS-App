@@ -22,12 +22,23 @@
         android:importantForAutofill="no"
         android:inputType="textMultiLine" />
 
-    <Button
-        android:id="@+id/buttonSaveNote"
+
+    <com.balysv.materialripple.MaterialRippleLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
         android:layout_marginTop="@dimen/_16sdp"
-        android:text="@string/save" />
+        android:layout_gravity="end"
+        style="@style/Ripple">
+
+        <Button
+            android:id="@+id/buttonSaveNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button_background"
+            android:textColor="@color/darkHealthBlue"
+            android:text="@string/save" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
 
 </LinearLayout>

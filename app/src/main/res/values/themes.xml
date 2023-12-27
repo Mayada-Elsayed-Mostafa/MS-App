@@ -30,5 +30,11 @@
         <item name="postSplashScreenTheme">@style/Base.Theme.MSApplication</item>
     </style>
 
+    <style name="Ripple" >
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">#9FA4BE</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+
 
 </resources>

@@ -74,8 +74,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:textSize="@dimen/_12ssp"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/_12ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,21 +95,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:textSize="@dimen/_12ssp"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_12ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/login_btn"
+            <com.balysv.materialripple.MaterialRippleLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_8sdp"
-                android:text="@string/log_in"
-                android:textSize="@dimen/_14ssp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password_ed" />
+                app:layout_constraintTop_toBottomOf="@id/password_ed">
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/outlined_button_background"
+                    android:text="@string/log_in"
+                    android:textColor="@color/darkHealthBlue"
+                    android:textSize="@dimen/_14ssp" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
 
             <LinearLayout
                 android:id="@+id/do_not_have_an_account_tv"
@@ -134,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:text="@string/sign_up"
-                    android:textColor="@color/healthBlue"
+                    android:textColor="@color/darkHealthBlue"
                     android:textSize="@dimen/_14ssp"
                     android:textStyle="bold" />
 

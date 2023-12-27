@@ -200,19 +200,26 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/save_event_btn"
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/Ripple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24sdp"
         android:layout_marginEnd="@dimen/_24sdp"
         android:layout_marginBottom="@dimen/_70sdp"
-        android:background="@drawable/outlined_button_background"
-        android:text="@string/save_event"
-        android:textColor="@color/healthDarkBlue"
-        android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/save_event_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button_background"
+            android:text="@string/save_event"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_14ssp" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
