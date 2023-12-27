@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
                 app:layout_collapseMode="parallax"
-                app:srcCompat="@drawable/img_login" />
+                app:srcCompat="@drawable/img_access_account" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/signIn_toolbar"
