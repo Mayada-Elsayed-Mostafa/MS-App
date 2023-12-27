@@ -47,7 +47,7 @@
         android:layout_above="@id/fabAddDocuments"
         android:layout_below="@id/toolbar"
         android:layout_centerInParent="true"
-        android:src="@drawable/add_document"
+        android:src="@drawable/img_add_doc"
         android:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

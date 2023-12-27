@@ -22,9 +22,9 @@
                 android:id="@+id/signUp_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:scaleType="centerInside"
                 app:layout_collapseMode="parallax"
-                app:srcCompat="@drawable/sign_img" />
+                app:srcCompat="@drawable/img_access_account" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/signUp_toolbar"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp"
     tools:context=".LoginActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -14,7 +14,7 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_250sdp"
+            android:layout_height="@dimen/_270sdp"
             app:contentScrim="?attr/cardBackgroundColor"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -22,9 +22,9 @@
                 android:id="@+id/signUp_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 app:layout_collapseMode="parallax"
-                app:srcCompat="@drawable/login_img" />
+                app:srcCompat="@drawable/img_login" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/signIn_toolbar"

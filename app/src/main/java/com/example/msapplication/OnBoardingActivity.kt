@@ -35,25 +35,25 @@ class OnBoardingActivity : AppCompatActivity() {
         val pageList = arrayListOf(
             Page(
                 welcome,
-                R.drawable.logo,
+                R.drawable.img_welcoming,
                 letsGetStarted
             ),
 
             Page(
                 track,
-                R.drawable.diagnosis,
+                R.drawable.img_doctor,
                 use_our_app
             ),
 
             Page(
                 connect,
-                R.drawable.connecting_with_others,
+                R.drawable.img_connection,
                 join
             ),
 
             Page(
                 lets,
-                R.drawable.hospital_patient,
+                R.drawable.img_patient,
                 begin
             )
         )

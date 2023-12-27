@@ -13,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_75sdp"
         android:importantForAccessibility="no"
-        android:src="@drawable/hospital_patient" />
+        android:scaleType="centerInside"
+        android:src="@drawable/img_doctor" />
 
     <TextView
         android:id="@+id/ready_tv"

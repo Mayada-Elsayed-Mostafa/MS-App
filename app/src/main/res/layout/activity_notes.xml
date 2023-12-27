@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/diary_img"
+        android:src="@drawable/img_diary"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/fabAddDocuments"
         app:layout_constraintEnd_toEndOf="parent"
