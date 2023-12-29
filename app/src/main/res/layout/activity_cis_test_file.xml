@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CisTestFile">
+
+    <Button
+        android:id="@+id/btnChooseFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose File"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="@color/healthLightBlue" />
+
+    <TextView
+        android:id="@+id/uploadedFileInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="No file chosen"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/predictFromFileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Predict from File"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="@color/healthLightBlue" />
+
+
+
+</LinearLayout>
