@@ -35,6 +35,11 @@
         android:layout_marginBottom="@dimen/_16sdp"
         android:backgroundTint="@color/healthLightBlue" />
 
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

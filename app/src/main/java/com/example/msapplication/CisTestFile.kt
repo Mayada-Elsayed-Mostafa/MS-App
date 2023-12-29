@@ -17,6 +17,7 @@ import java.nio.channels.FileChannel
 class CisTestFile : AppCompatActivity() {
 
     private lateinit var selectedFileTextView: TextView
+    private lateinit var resultTextView: TextView
     private lateinit var tflite: Interpreter
     private var selectedFileUri: Uri? = null
 
@@ -35,6 +36,7 @@ class CisTestFile : AppCompatActivity() {
         setContentView(R.layout.activity_cis_test_file)
 
         selectedFileTextView = findViewById(R.id.uploadedFileInfo)
+        resultTextView = findViewById(R.id.result_tv)
 
         val chooseFileButton: Button = findViewById(R.id.btnChooseFile)
         chooseFileButton.setOnClickListener {
@@ -53,9 +55,9 @@ class CisTestFile : AppCompatActivity() {
             if (::tflite.isInitialized) {
                 // Perform prediction or further processing using the selected file data
                 val result = performPrediction()
-                selectedFileTextView.text = result
+                resultTextView.text = result
             } else {
-                selectedFileTextView.text = "Model not loaded. Unable to make predictions."
+                resultTextView.text = "Model not loaded. Unable to make predictions."
             }
         }
     }
@@ -103,6 +105,7 @@ class CisTestFile : AppCompatActivity() {
         filePickerLauncher.launch(intent)
     }
 
+
     private fun makePrediction(vararg values: Float): String {
         // Ensure the correct number of input values
         if (values.size != 18) {
@@ -130,22 +133,8 @@ class CisTestFile : AppCompatActivity() {
     }
 
     private fun handleSelectedFile(uri: Uri) {
-        val inputStream = contentResolver.openInputStream(uri)
-        val content = inputStream?.bufferedReader().use { it?.readText() }
-
-        // Parse the content into floating-point numbers
-        val values = content?.split(",")?.mapNotNull { it.toFloatOrNull() }
-
-        if (values != null && values.size == 18) {
-            // Assuming there are 18 floating-point numbers in the file (adjust as needed)
-
-            // Call the makePrediction function with the parsed values
-            val predictionResult = makePrediction(*values.toFloatArray())
-
-            // Update UI or perform any further actions with the predictionResult
-            selectedFileTextView.text = "File chosen: $uri\nPrediction: $predictionResult"
-        } else {
-            selectedFileTextView.text = "Invalid file format or content."
-        }
+        selectedFileUri = uri
+        // Update UI or perform any further actions related to the selected file
+        selectedFileTextView.text = "File chosen: $uri"
     }
 }
