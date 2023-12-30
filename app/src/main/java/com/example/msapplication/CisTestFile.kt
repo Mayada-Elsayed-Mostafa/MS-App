@@ -105,7 +105,6 @@ class CisTestFile : AppCompatActivity() {
         filePickerLauncher.launch(intent)
     }
 
-
     private fun makePrediction(vararg values: Float): String {
         // Ensure the correct number of input values
         if (values.size != 18) {
