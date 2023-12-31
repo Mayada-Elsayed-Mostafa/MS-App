@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.msapplication.HomeFragment"
+        android:name="com.example.msapplication.ui.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
 
@@ -21,27 +21,27 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.example.msapplication.DashboardFragment"
+        android:name="com.example.msapplication.ui.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard"/>
     <activity
         android:id="@+id/notesActivity"
-        android:name="com.example.msapplication.NotesActivity"
+        android:name="com.example.msapplication.ui.NotesActivity"
         android:label="Notes"
         tools:layout="@layout/activity_notes" />
     <activity
         android:id="@+id/settingsActivity"
-        android:name="com.example.msapplication.SettingsActivity"
+        android:name="com.example.msapplication.ui.SettingsActivity"
         android:label="Settings"
         tools:layout="@layout/activity_settings" />
     <activity
         android:id="@+id/communityActivity"
-        android:name="com.example.msapplication.CommunityActivity"
+        android:name="com.example.msapplication.ui.CommunityActivity"
         android:label="activity_community"
         tools:layout="@layout/activity_community" />
     <activity
         android:id="@+id/profileActivity"
-        android:name="com.example.msapplication.ProfileActivity"
+        android:name="com.example.msapplication.ui.ProfileActivity"
         android:label="activity_profile"
         tools:layout="@layout/activity_profile" />
 

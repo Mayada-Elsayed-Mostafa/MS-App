@@ -7,7 +7,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.cardview.widget.CardView
-import com.example.msapplication.model.Note
+import com.example.msapplication.data.domain.Note
 
 class NotesAdapter(
     private val notes: List<Note>,

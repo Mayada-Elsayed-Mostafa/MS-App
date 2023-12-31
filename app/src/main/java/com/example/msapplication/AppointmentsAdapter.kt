@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.msapplication.model.Appointment
+import com.example.msapplication.data.domain.Appointment
 
 class AppointmentsAdapter(private var appointments: MutableList<Appointment> = mutableListOf()) :
     RecyclerView.Adapter<AppointmentsAdapter.ViewHolder>() {

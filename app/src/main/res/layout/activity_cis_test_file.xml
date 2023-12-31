@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/_8sdp"
+    android:gravity="bottom"
     android:orientation="vertical"
-    tools:context=".CisTestFile">
+    android:paddingBottom="@dimen/_8sdp"
+    tools:context=".ui.CisTestFile">
 
-    <Button
-        android:id="@+id/btnChooseFile"
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/Ripple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose File"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
-        android:backgroundTint="@color/healthLightBlue" />
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:mrl_rippleRoundedCorners="@dimen/_18sdp">
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button_background"
+            android:text="Choose File"
+            android:textColor="@color/darkHealthBlue"
+            android:textSize="@dimen/_14ssp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
 
     <TextView
         android:id="@+id/uploadedFileInfo"
@@ -22,24 +38,39 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_16sdp"
-        android:text="No file chosen"
-        android:textSize="@dimen/_14ssp"
-        android:textColor="@android:color/black" />
+        android:text=" No file chosen"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14ssp" />
 
-    <Button
-        android:id="@+id/predictFromFileBtn"
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/Ripple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Predict from File"
+        android:layout_marginStart="@dimen/_2sdp"
         android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
-        android:backgroundTint="@color/healthLightBlue" />
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:mrl_rippleRoundedCorners="@dimen/_18sdp">
+
+        <Button
+            android:id="@+id/predictFromFileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button_background"
+            android:text="Predict from File"
+            android:textColor="@color/darkHealthBlue"
+            android:textSize="@dimen/_14ssp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
 
     <TextView
         android:id="@+id/result_tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

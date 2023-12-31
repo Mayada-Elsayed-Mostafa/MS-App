@@ -8,7 +8,7 @@
     android:layout_marginStart="@dimen/_8sdp"
     android:layout_marginEnd="@dimen/_8sdp"
     android:orientation="vertical"
-    tools:context=".DashboardFragment">
+    tools:context=".ui.DashboardFragment">
 
     <!-- Title -->
     <TextView

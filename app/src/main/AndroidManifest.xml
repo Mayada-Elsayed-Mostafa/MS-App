@@ -20,64 +20,64 @@
         android:theme="@style/Theme.MSApplication"
         tools:targetApi="31">
         <activity
-            android:name=".CisTestFile"
+            android:name=".ui.CisTestFile"
             android:exported="false" />
         <activity
-            android:name=".CalendarActivity"
+            android:name=".ui.CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ui.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatsActivity"
+            android:name=".ui.ChatsActivity"
             android:exported="false" />
         <activity
-            android:name=".CommunityActivity"
+            android:name=".ui.CommunityActivity"
             android:exported="false" />
         <activity
-            android:name=".DocumentsActivity"
+            android:name=".ui.DocumentsActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".NotificationActivity"
+            android:name=".ui.NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".MonitoringActivity"
+            android:name=".ui.MonitoringActivity"
             android:exported="false" />
         <activity
-            android:name=".EdssActivity"
+            android:name=".ui.EdssActivity"
             android:exported="false" />
         <activity
-            android:name=".MriActivity"
+            android:name=".ui.MriActivity"
             android:exported="false" />
         <activity
-            android:name=".NotesActivity"
+            android:name=".ui.NotesActivity"
             android:exported="false" />
         <activity
-            android:name=".CisActivity"
+            android:name=".ui.CisActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".ui.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".LastOnBoardingActivity"
+            android:name=".ui.LastOnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoardingActivity"
+            android:name=".ui.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".CisTest"
+            android:name=".ui.CisTest"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
