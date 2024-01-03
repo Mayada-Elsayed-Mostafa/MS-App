@@ -90,5 +90,6 @@
     <string name="enter_time">أدخل وقت التنبيه</string>
     <string name="enter_the_event_details">أدخل تفاصيل الحدث</string>
     <string name="enter_the_event_name">أدخل اسم الحدث</string>
+    <string name="events">Events</string>
 
 </resources>
