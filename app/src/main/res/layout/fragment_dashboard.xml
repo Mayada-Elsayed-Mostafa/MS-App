@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,293 +18,308 @@
         android:textColor="@color/healthDarkBlue"
         android:textSize="@dimen/_18ssp" />
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:orientation="horizontal">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- Card 1 (MRI) -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:layout_weight="2"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
+            android:orientation="vertical">
 
-            <!-- Card Content for Card 1 -->
-            <LinearLayout
-                android:id="@+id/layout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
-
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/mri_icon"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="detection using MRI"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card 2 (EDSS) -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            android:layout_weight="1"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
-
-            <!-- Card Content for Card 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/edss"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
+                <!-- Card 1 (MRI) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="EDSS assessment"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="2"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 1 -->
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/mri_icon"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="detection using MRI"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 2 (EDSS) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/edss"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="EDSS assessment"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:orientation="horizontal">
-
-        <!-- Card 3 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:layout_weight="1"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
-
-            <!-- Card Content for Card 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/edss"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
+                <!-- Card 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="CIS detection"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/edss"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="CIS detection"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 4 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/monitoring"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Monitoring"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card 4 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            android:layout_weight="2"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
-
-            <!-- Card Content for Card 4 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/monitoring"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
+                <!-- Card 1 (MRI) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Monitoring"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="2"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/edss"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="MS type detection"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 2 (EDSS) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <!-- Card Content for Card 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/edss"
+                            app:tint="@color/healthBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="MRI segmentation"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:orientation="horizontal">
-
-        <!-- Card 1 (MRI) -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:layout_weight="2"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
-
-            <!-- Card Content for Card 3 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
-
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/edss"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="MS type detection"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card 2 (EDSS) -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            android:layout_weight="1"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
-
-            <!-- Card Content for Card 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/edss"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
+                <!-- Card 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="MRI segmentation"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
 
-    </LinearLayout>
+                    <!-- Card Content for Card 1 -->
+                    <LinearLayout
+                        android:id="@+id/layout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashboard_card_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/mri_icon"
+                            app:tint="@color/healthBlue" />
 
-        <!-- Card 3 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:layout_weight="1"
-            android:padding="@dimen/_16sdp"
-            app:cardCornerRadius="@dimen/_16sdp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="SDMT, SNRS combiwise assessment"
+                            android:textColor="@color/healthDarkBlue"
+                            android:textSize="@dimen/_14ssp" />
 
-            <!-- Card Content for Card 1 -->
-            <LinearLayout
-                android:id="@+id/layout5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dashboard_card_background"
-                android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
-
-                <ImageView
-                    android:layout_width="@dimen/_48sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/mri_icon"
-                    app:tint="@color/healthBlue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="SDMT, SNRS combiwise assessment"
-                    android:textColor="@color/healthDarkBlue"
-                    android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </LinearLayout>
