@@ -13,9 +13,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/neuron"
+        android:icon="@drawable/neuron_icon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/neuron"
+        android:roundIcon="@drawable/neuron_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.MSApplication"
         tools:targetApi="31">

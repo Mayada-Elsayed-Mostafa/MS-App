@@ -16,6 +16,6 @@
         android:layout_marginTop="@dimen/_100sdp"
         android:layout_marginEnd="@dimen/_100sdp"
         android:layout_marginBottom="@dimen/_100sdp"
-        android:src="@drawable/neuron" />
+        android:src="@drawable/neuron_icon" />
 
 </RelativeLayout>

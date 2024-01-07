@@ -15,8 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16sdp"
         android:text="@string/multiple_sclerosis_management"
+        android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/healthDarkBlue"
-        android:textSize="@dimen/_18ssp" />
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -42,14 +44,15 @@
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="2"
                     android:padding="@dimen/_16sdp"
-                    app:cardCornerRadius="@dimen/_16sdp">
+                    app:cardCornerRadius="@dimen/_16sdp"
+                    app:cardElevation="@dimen/_2sdp">
 
                     <!-- Card Content for Card 1 -->
                     <LinearLayout
                         android:id="@+id/layout1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -57,15 +60,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/mri_icon"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/mri_scan"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="detection using MRI"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
 
                     </LinearLayout>
@@ -86,7 +89,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -94,15 +97,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/edss"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/disability"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="EDSS assessment"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -130,7 +133,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -138,15 +141,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/edss"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/neuron"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="CIS detection"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
 
@@ -167,7 +170,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -175,15 +178,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/monitoring"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/monitor"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="Monitoring"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
 
                     </LinearLayout>
@@ -213,7 +216,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -221,15 +224,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/edss"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/diagnostic_icon"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="MS type detection"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -249,7 +252,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -257,15 +260,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/edss"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/brain_icon"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="MRI segmentation"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -293,7 +296,7 @@
                         android:id="@+id/layout5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/dashboard_card_background"
+                        android:background="@drawable/gradient_background"
                         android:orientation="vertical"
                         android:padding="@dimen/_16sdp">
 
@@ -301,15 +304,15 @@
                             android:layout_width="@dimen/_48sdp"
                             android:layout_height="@dimen/_48sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/mri_icon"
-                            app:tint="@color/healthBlue" />
+                            android:src="@drawable/assessment_brain"
+                            app:tint="@color/healthWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="SDMT, SNRS combiwise assessment"
-                            android:textColor="@color/healthDarkBlue"
+                            android:textColor="@color/healthWhite"
                             android:textSize="@dimen/_14ssp" />
 
                     </LinearLayout>
