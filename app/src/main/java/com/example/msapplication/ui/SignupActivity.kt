@@ -145,4 +145,5 @@ class SignupActivity : AppCompatActivity() {
         startActivity(intentToHomeActivity)
         finish()
     }
+
 }
