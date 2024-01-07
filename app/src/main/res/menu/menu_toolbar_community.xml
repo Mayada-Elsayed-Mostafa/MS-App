@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/menu_chats"
-        android:icon="@drawable/chat"
+        android:icon="@drawable/chat_icon"
         android:title="@string/chats"
         app:showAsAction="always" />
 
