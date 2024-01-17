@@ -85,6 +85,5 @@ dependencies {
 
     implementation("com.balysv:material-ripple:1.0.2")
 
-    implementation("com.tapadoo.android:alerter:8.0.3")
 
 }
