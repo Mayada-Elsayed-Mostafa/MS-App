@@ -3,6 +3,7 @@ package com.example.msapplication.ui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -70,5 +71,12 @@ class ProfileActivity : AppCompatActivity() {
             val intentToDocumentsPage = Intent(this, DocumentsActivity::class.java)
             startActivity(intentToDocumentsPage)
         }
+
+        val bmiCalculatorBtn = findViewById<Button>(R.id.calculate_bmi_btn!!)
+        bmiCalculatorBtn.setOnClickListener {
+            val intentToBmiCalculator = Intent(this, BmiCalculatorActivity::class.java)
+            startActivity(intentToBmiCalculator)
+        }
+
     }
 }
