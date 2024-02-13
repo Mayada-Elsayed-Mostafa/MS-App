@@ -20,6 +20,9 @@
         android:theme="@style/Theme.MSApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ui.RiskActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.BmiCalculatorActivity"
             android:exported="false" />
         <activity

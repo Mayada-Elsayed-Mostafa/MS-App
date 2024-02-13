@@ -8,7 +8,7 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingBottom="@dimen/_8sdp"
-    tools:context=".ui.CisTestFile">
+    tools:context=".ui.RiskActivity">
 
     <com.balysv.materialripple.MaterialRippleLayout
         style="@style/Ripple"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outlined_button_background"
-            android:text="Predict from File"
+            android:text="Predict"
             android:textColor="@color/darkHealthBlue"
             android:textSize="@dimen/_14ssp" />
 
@@ -72,6 +72,5 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/_14ssp"
         android:textStyle="bold" />
-
 
 </LinearLayout>

@@ -18,10 +18,11 @@ class DashboardFragment : Fragment() {
 
 
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val cardMri = view.findViewById<CardView>(R.id.card1!!)
-        val cardEdss = view.findViewById<CardView>(R.id.card2!!)
-        val cardCis = view.findViewById<CardView>(R.id.card3!!)
-        val cardMonitoring = view.findViewById<CardView>(R.id.card4!!)
+        val cardMri = view.findViewById<CardView>(R.id.card1)
+        val cardEdss = view.findViewById<CardView>(R.id.card2)
+        val cardCis = view.findViewById<CardView>(R.id.card3)
+        val cardMonitoring = view.findViewById<CardView>(R.id.card4)
+        val cardRisk = view.findViewById<CardView>(R.id.card8)
 
         cardMri.setOnClickListener {
             val intent = Intent(context, MriActivity::class.java)
@@ -43,15 +44,11 @@ class DashboardFragment : Fragment() {
             startActivity(intent)
         }
 
+        cardRisk.setOnClickListener {
+            val intent = Intent(context, RiskActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }
-
-    private fun navigateToFragment(fragment: Fragment) {
-        val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container, fragment)
-        fragmentTransaction.addToBackStack(null) // If you want to add to the back stack
-        fragmentTransaction.commit()
-    }
-
 }
