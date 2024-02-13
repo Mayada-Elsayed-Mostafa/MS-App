@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.msapplication.R
 import org.tensorflow.lite.Interpreter
@@ -20,6 +21,18 @@ class RiskActivity : AppCompatActivity() {
 
     private val PICK_CSV_FILE_REQUEST = 1
     private lateinit var modelInterpreter: Interpreter
+    private var selectedFileUri: Uri? = null
+    private lateinit var selectedFileTextView: TextView
+
+    // Activity result launcher for file selection
+    private val filePickerLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                result.data?.data?.let { uri ->
+                    handleSelectedFile(uri)
+                }
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +40,7 @@ class RiskActivity : AppCompatActivity() {
 
         // Load the TensorFlow Lite model when the activity is created
         modelInterpreter = Interpreter(loadModelFileFromAssets())
+        selectedFileTextView = findViewById(R.id.uploadedFileInfo)
 
         findViewById<Button>(R.id.btnChooseFile).setOnClickListener {
             pickCsvFile()
@@ -51,8 +65,8 @@ class RiskActivity : AppCompatActivity() {
 
     private fun pickCsvFile() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "text/csv"
-        startActivityForResult(intent, PICK_CSV_FILE_REQUEST)
+        intent.type = "*/*" // Allow all file types
+        filePickerLauncher.launch(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -102,5 +116,11 @@ class RiskActivity : AppCompatActivity() {
         val output = Array(1) { FloatArray(1) }
         modelInterpreter.run(inputData, output)
         return output[0][0]
+    }
+
+    private fun handleSelectedFile(uri: Uri) {
+        selectedFileUri = uri
+        // Update UI or perform any further actions related to the selected file
+        selectedFileTextView.text = "File chosen: $uri"
     }
 }
