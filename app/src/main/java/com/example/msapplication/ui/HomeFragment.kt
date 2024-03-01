@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.msapplication.AppointmentsAdapter
-import com.example.msapplication.data.DailyTipsManager
 import com.example.msapplication.OnEventSavedListener
 import com.example.msapplication.R
+import com.example.msapplication.data.DailyTipsManager
 import com.example.msapplication.data.domain.Appointment
 
 class HomeFragment : Fragment(), OnEventSavedListener {
@@ -24,23 +24,20 @@ class HomeFragment : Fragment(), OnEventSavedListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         // Set up the welcome message
-        val userName = view.findViewById<TextView>(R.id.welcomeMessageTV)
-        userName.text = "Welcome Mayada"
+        val welcomeMessageTV: TextView = view.findViewById(R.id.welcomeMessageTV)
+        welcomeMessageTV.text = "Welcome Mayada"
 
         // Set up the Daily Tips section
         dailyTipText = view.findViewById(R.id.dailyTipText)
         updateDailyTip()
 
         // Initialize RecyclerView and set the adapter with an empty list
-        appointmentsRecyclerView = view.findViewById<RecyclerView>(R.id.appointmentsRecyclerView)
+        appointmentsRecyclerView = view.findViewById(R.id.appointmentsRecyclerView)
         appointmentsAdapter = AppointmentsAdapter()
         appointmentsRecyclerView.adapter = appointmentsAdapter
-
-        // Use requireContext() instead of this for obtaining the context
         appointmentsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         return view
@@ -53,8 +50,6 @@ class HomeFragment : Fragment(), OnEventSavedListener {
 
     fun updateAppointmentsList(appointment: Appointment) {
         // Update the data set in your RecyclerView adapter
-        // You should have a method in your RecyclerView adapter to add the new appointment to the list
-        // For example, if you have a method named 'addAppointment' in your adapter, use it like this:
         appointmentsAdapter.addAppointment(appointment)
     }
 

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,25 +10,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/healthLightGray"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
 
         <!-- Welcome Message -->
         <TextView
             android:id="@+id/welcomeMessageTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:padding="@dimen/_16sdp"
-            android:textColor="@color/healthDarkBlue"
-            android:textSize="@dimen/_14ssp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:text="Welcome !"
+            android:textSize="@dimen/_18ssp"
             android:textStyle="bold" />
 
-        <!-- Daily Tips or Insights Section inside a CardView -->
+        <!-- Daily Tips or Insights Section -->
         <androidx.cardview.widget.CardView
             android:id="@+id/dailyTipsCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@color/healthWhite"
             app:cardCornerRadius="@dimen/_12sdp">
 
             <LinearLayout
@@ -37,83 +38,127 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_16sdp">
 
-                <!-- Section Title -->
                 <TextView
                     android:id="@+id/dailyTipsTitle"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_8sdp"
-                    android:text="@string/daily_tips_and_insights"
+                    android:text="Daily Tips and Insights"
                     android:textSize="@dimen/_16ssp"
                     android:textStyle="bold" />
 
-                <!-- Displaying Daily Tip or Insight -->
                 <TextView
                     android:id="@+id/dailyTipText"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_14ssp" />
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
 
         <!-- Appointments Section -->
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/appointmentsTitleTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:text="@string/appointments"
-            android:textSize="@dimen/_16ssp" />
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Appointments"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
 
-        <!-- Appointments RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/appointmentsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_16sdp" />
+            android:layout_marginBottom="@dimen/_16sdp" />
 
+        <!-- Health Goals Section -->
+        <TextView
+            android:id="@+id/healthGoalsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Health Goals"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
 
-
-        <!-- Symptom Tracker CardView -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/symptomTrackerCardView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_8sdp"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="@dimen/_16sdp">
+            android:background="@color/healthLightBlue"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
 
-            <LinearLayout
-                android:id="@+id/symptomTrackerSection"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/goal1Checkbox"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/_12sdp">
+                android:text="Exercise 30 minutes daily"
+                android:textColor="@color/healthDarkGray" />
 
-                <!-- Section Title -->
-                <TextView
-                    android:id="@+id/symptomTrackerTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_8sdp"
-                    android:text="Symptom Tracker"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/goal2Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eat 5 servings of fruits and vegetables daily"
+                android:textColor="@color/healthDarkGray" />
 
-                <!-- Visualizing Symptoms Over Time (Placeholder) -->
-                <ImageView
-                    android:id="@+id/symptomChart"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_150sdp"
-                    android:scaleType="fitCenter" />
-            </LinearLayout>
+            <CheckBox
+                android:id="@+id/goal3Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink 8 glasses of water daily"
+                android:textColor="@color/healthDarkGray" />
 
-        </androidx.cardview.widget.CardView>
+            <!-- Add more checkboxes for additional goals as needed -->
 
+        </LinearLayout>
+
+        <!-- Emergency Contact Information -->
+        <TextView
+            android:id="@+id/emergencyContactTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Emergency Contact Information"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/emergencyContactEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:hint="Emergency Contact Number"
+            android:inputType="phone" />
+
+        <!-- Feedback and Support -->
+        <TextView
+            android:id="@+id/feedbackSupportTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Feedback and Support"
+            android:textColor="@color/healthDarkBlue"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/feedbackEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:hint="Enter your feedback here" />
+
+        <Button
+            android:id="@+id/submitFeedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Feedback" />
 
     </LinearLayout>
 </ScrollView>

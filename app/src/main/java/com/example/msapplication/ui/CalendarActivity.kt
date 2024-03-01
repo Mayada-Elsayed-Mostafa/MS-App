@@ -149,9 +149,6 @@ class CalendarActivity : AppCompatActivity(), OnEventSavedListener {
     }
 
     override fun onEventSaved(appointment: Appointment) {
-        // Notify the listener that an event has been saved
-        onEventSavedListener.onEventSaved(appointment)
-
         // Update the Appointments RecyclerView in HomeFragment
         val homeFragment =
             supportFragmentManager.findFragmentByTag(HomeFragment.TAG) as HomeFragment?
